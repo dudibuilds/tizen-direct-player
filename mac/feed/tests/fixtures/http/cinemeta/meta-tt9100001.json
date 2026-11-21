@@ -1,0 +1,31 @@
+{
+ "meta": {
+  "id": "tt9100001",
+  "imdb_id": "tt9100001",
+  "type": "series",
+  "name": "Night Harbor",
+  "releaseInfo": "2023–",
+  "released": "2023-03-01T00:00:00.000Z",
+  "imdbRating": "8.1",
+  "genres": [
+   "Crime",
+   "Drama",
+   "Mystery"
+  ],
+  "genre": [
+   "Crime",
+   "Drama",
+   "Mystery"
+  ],
+  "country": "United Kingdom",
+  "director": [],
+  "writer": [
+   "Ava Stone"
+  ],
+  "cast": [
+   "Tom Reed",
+   "Lia Moss"
+  ],
+  "poster": "https://images.metahub.space/poster/small/tt9100001/img"
+ }
+}

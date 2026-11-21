@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- PeerSharp's uTP (src/PeerSharp/Internals/Utp) over its own UdpListener. Build with
+       -p:PeerSharpSrc=/path/to/PeerSharp/src (a clone outside this repository; run dotnet from this repository so
+       PeerSharp's global.json SDK pin does not apply). "PeerSharp.Benchmarks" is an InternalsVisibleTo name. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>PeerSharp.Benchmarks</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../Shared/*.cs" />
+    <ProjectReference Include="$(PeerSharpSrc)/PeerSharp/PeerSharp.csproj" AdditionalProperties="TreatWarningsAsErrors=false;NuGetAudit=false;EnablePackageValidation=false;GenerateDocumentationFile=false" />
+  </ItemGroup>
+</Project>

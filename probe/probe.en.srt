@@ -1,0 +1,7 @@
+1
+00:00:00,500 --> 00:00:20,000
+English subtitles. Use the player controls to change language, size or timing.
+
+2
+00:06:56,000 --> 00:07:16,000
+The player reached the seek test point.

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>05 Start card</title>
+<link rel="stylesheet" href="mock.css">
+<style>
+  .art { left: 0; top: 0; width: 1920px; height: 1080px; opacity: .72; animation: drift 20s linear infinite alternate; transform-origin: 70% 40%; }
+  @keyframes drift { from { transform: scale(1); } to { transform: scale(1.04); } }
+  .line { left: 96px; top: 760px; width: 620px; height: 4px; border-radius: 2px; background: rgba(255,255,255,.18); overflow: hidden; }
+  .line i { position: absolute; left: 0; top: 0; height: 100%; width: 58%; border-radius: 2px; background: #fff; animation: pulse 1.2s ease-in-out infinite alternate; }
+  @keyframes pulse { from { opacity: .6; } to { opacity: 1; } }
+</style></head>
+<body>
+<div class="stage a" data-loop="off">
+  <div class="art layer"><img class="cover" src="assets/bb-bg.jpg" alt=""></div>
+  <div style="left:0;top:0;width:1100px;height:1080px;background:linear-gradient(90deg,rgba(11,14,20,.98) 0%,rgba(11,14,20,.9) 36%,rgba(11,14,20,0) 100%)"></div>
+  <div style="left:0;top:700px;width:1920px;height:380px;background:linear-gradient(180deg,rgba(11,14,20,0),rgba(11,14,20,.9))"></div>
+
+  <div class="layer" data-area="60000" style="left:96px;top:400px;width:560px;height:200px"><img src="assets/bb-logo.png" alt="Breaking Bad"></div>
+  <div class="t-body" style="left:96px;top:624px">S2:E3<span class="sep"></span>Bit by a Dead Bee</div>
+  <div class="t-meta nowrap" style="left:96px;top:700px"><span class="white">Connecting</span><span class="sep"></span>checking 8 sources</div>
+  <div class="line layer"><i></i></div>
+</div>
+<script src="mock.js"></script>
+</body></html>

@@ -1,0 +1,47 @@
+[
+ {
+  "_id": "tt9200006",
+  "name": "Northern Lights Heist",
+  "type": "movie",
+  "removed": false,
+  "temp": false,
+  "_ctime": "2026-01-02T10:00:00.000Z",
+  "_mtime": "2026-06-01T22:00:00.000Z",
+  "state": {
+   "lastWatched": "2026-06-01T22:00:00.000Z",
+   "timesWatched": 1,
+   "flaggedWatched": 1,
+   "timeOffset": 0,
+   "duration": 6000000,
+   "video_id": "tt9200006",
+   "noNotif": false
+  }
+ },
+ {
+  "_id": "tt9100002",
+  "name": "Glass Valley",
+  "type": "series",
+  "removed": false,
+  "temp": false,
+  "_ctime": "2026-09-30T10:00:00.000Z",
+  "_mtime": "2026-11-10T21:50:00.000Z",
+  "state": {
+   "lastWatched": "2026-11-10T21:50:00.000Z",
+   "timesWatched": 0,
+   "overallTimeWatched": 36000000,
+   "timeOffset": 0,
+   "video_id": "tt9100002:2:4",
+   "noNotif": false
+  }
+ },
+ {
+  "_id": "tt9300099",
+  "name": "Removed Thing",
+  "type": "movie",
+  "removed": true,
+  "temp": false,
+  "_ctime": "2026-01-01T00:00:00.000Z",
+  "_mtime": "2026-01-02T00:00:00.000Z",
+  "state": {}
+ }
+]

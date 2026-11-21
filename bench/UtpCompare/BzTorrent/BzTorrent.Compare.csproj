@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- bzTorrent's UTPConnection / UTPListener. Build with -p:BzTorrentSrc=/path/to/bzTorrent (a clone outside this
+       repository). -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>UtpCompare.BzTorrent</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../Shared/*.cs" />
+    <ProjectReference Include="$(BzTorrentSrc)/bzTorrent/bzTorrent.csproj" AdditionalProperties="GeneratePackageOnBuild=false" />
+  </ItemGroup>
+</Project>

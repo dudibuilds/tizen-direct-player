@@ -1,0 +1,29 @@
+{
+ "meta": {
+  "id": "tt9200002",
+  "imdb_id": "tt9200002",
+  "type": "movie",
+  "name": "Paper Kings",
+  "releaseInfo": "2023",
+  "released": "2023-05-05T00:00:00.000Z",
+  "imdbRating": "7.6",
+  "genres": [
+   "Crime",
+   "Drama"
+  ],
+  "genre": [
+   "Crime",
+   "Drama"
+  ],
+  "country": "United States",
+  "director": [
+   "Leo Hart"
+  ],
+  "writer": [],
+  "cast": [
+   "Rosa Vale",
+   "Sam Ortiz"
+  ],
+  "poster": "https://images.metahub.space/poster/small/tt9200002/img"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "meta": {
+  "id": "tt9200006",
+  "imdb_id": "tt9200006",
+  "type": "movie",
+  "name": "Northern Lights Heist",
+  "releaseInfo": "2024",
+  "released": "2024-02-20T00:00:00.000Z",
+  "imdbRating": "7.2",
+  "genres": [
+   "Crime",
+   "Thriller"
+  ],
+  "genre": [
+   "Crime",
+   "Thriller"
+  ],
+  "country": "United States",
+  "director": [
+   "Nils Berg"
+  ],
+  "writer": [],
+  "cast": [
+   "Ana Holt"
+  ],
+  "poster": "https://images.metahub.space/poster/small/tt9200006/img"
+ }
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>07 Skip intro</title>
+<link rel="stylesheet" href="mock.css">
+<style>
+  /* State B: the episode plays, no chrome. State A (PNG): the intro has started (times from TheIntroDB, IntroDB,
+     AniSkip or chapters); one focused "Skip intro" button sits bottom right for as long as the intro runs.
+     OK skips to the end of the intro; any other key leaves it and it fades out when the intro ends. No guess:
+     without known times the button never shows. "Skip recap" uses the same button. */
+  .shade { right: 0; bottom: 0; width: 900px; height: 380px; opacity: 0;
+    background: radial-gradient(110% 100% at 100% 100%, rgba(0,0,0,.8) 0, rgba(0,0,0,.45) 40%, rgba(0,0,0,0) 72%);
+    transition: opacity 160ms var(--fade-out); }
+  .a .shade { opacity: 1; transition: opacity 240ms var(--fade-in); }
+  .skip { right: 96px; bottom: 112px; opacity: 0; transform: translateY(16px);
+    transition: transform 160ms var(--fade-out), opacity 160ms var(--fade-out); }
+  .a .skip { opacity: 1; transform: none; transition: transform var(--t-pop) var(--move), opacity var(--t-pop) var(--fade-in); }
+  .skip .btn.focus { transform: none; box-shadow: 0 8px 28px rgba(0,0,0,.55); }
+</style></head>
+<body>
+<div class="stage a" data-hold-a="4200" data-hold-b="2200">
+  <img class="cover" src="assets/severance-bg.jpg" alt="">
+  <div class="shade"></div>
+  <div class="skip"><div class="btn focus">Skip intro<svg class="i"><use href="#i-ffw"/></svg></div></div>
+</div>
+<script src="mock.js"></script>
+</body></html>

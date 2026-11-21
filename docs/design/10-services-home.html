@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>10 Services row on Home</title>
+<link rel="stylesheet" href="mock.css">
+<style>
+  /* A "Services" row on Home: an entry into each service's own feed, never a filter on Home. It sits below the
+     personal rows (Continue watching, New episodes, For you) and is never the first row, so Home always opens on a
+     title. Reaching it scrolls Home, so this is the scrolled layout from UiLayoutBrowse: the billboard becomes a
+     380 px banner, the focused row's title sits at y 460, the bottom slice of the row above peeks in dimmed, and the
+     next row shows below. The menu only draws on the unscrolled Home, so it isn't on screen here.
+     Each card: the backdrop of what is most popular on that service right now, a gradient in the service's tint and
+     the service name as plain Title text, no logos. Home itself stays ink; only the cards carry tints. While a
+     service card has focus the banner describes the service. All numbers: JustWatch, US, 2026-11-20.
+     State B: focus on Netflix. State A (settled): focus moved right to Apple TV; the banner cross-fades after
+     focus rests, as on Home today. */
+  .bd { transition: opacity 500ms var(--fade-in); }
+  .bd.b, .hero.b { opacity: 1; } .bd.a, .hero.a { opacity: 0; }
+  .a .bd.b, .a .hero.b { opacity: 0; } .a .bd.a, .a .hero.a { opacity: 1; }
+  .hero { transition: opacity 240ms var(--fade-in); }
+
+  /* service tints (see docs/streaming-services.md): --ink is the tinted page, --tint the glow/gradient hue */
+  .t-apple   { --ink: 14,22,34;  --tint: 60,90,122; }
+  .t-netflix { --ink: 22,11,14;  --tint: 122,36,48; }
+  .t-disney  { --ink: 10,16,34;  --tint: 42,76,154; }
+  .t-hbo     { --ink: 18,12,31;  --tint: 90,58,154; }
+  .svc { width: 464px; height: 261px; }
+  .svc .shade { left: 0; top: 0; width: 100%; height: 100%;
+    background: linear-gradient(20deg, rgba(var(--ink),.94) 0%, rgba(var(--tint),.62) 42%, rgba(var(--tint),0) 80%); }
+  .svc .name { left: 28px; bottom: 70px; font-size: 56px; line-height: 66px; font-weight: 700; letter-spacing: -.01em; white-space: nowrap; }
+  .svc .meta { left: 28px; bottom: 24px; font-size: 28px; line-height: 40px; font-weight: 500; color: rgba(255,255,255,.78); white-space: nowrap; }
+  /* focus walks from Netflix (B) to Apple TV (A) */
+  .f-b { box-shadow: 0 0 0 4px var(--focus), var(--shadow); transform: scale(1.05); z-index: 3; }
+  .a .f-b { box-shadow: none; transform: none; z-index: 1; }
+  .a .f-a { box-shadow: 0 0 0 4px var(--focus), var(--shadow); transform: scale(1.05); z-index: 3; }
+  .rowtitle { left: 96px; }
+  .tile { width: 464px; height: 261px; }
+</style></head>
+<body>
+<div class="stage a" data-hold-a="5200" data-hold-b="2400">
+  <!-- the row above (For you): its bottom slice peeks between the banner and the focused row, dimmed -->
+  <div class="card tile" style="left:96px;top:167px"><img class="cover" src="assets/interstellar-bg.jpg" alt=""></div>
+  <div class="card tile" style="left:592px;top:167px"><img class="cover" src="assets/dark-bg.jpg" alt=""></div>
+  <div class="card tile" style="left:1088px;top:167px"><img class="cover" src="assets/aot-bg.jpg" alt=""></div>
+  <div class="card tile" style="left:1584px;top:167px"><img class="cover" src="assets/inception-bg.jpg" alt=""></div>
+  <div style="left:0;top:380px;width:1920px;height:56px;background:rgba(11,14,20,.6)"></div>
+
+  <!-- banner (scrolled billboard): an opaque ink band 0-380 with the focused service's top title on it -->
+  <div style="left:0;top:0;width:1920px;height:380px;background:#0B0E14"></div>
+  <div class="layer bd b" style="left:420px;top:0;width:1500px;height:380px;overflow:hidden"><img src="assets/fauda-bg.jpg" alt="" style="position:absolute;left:0;top:-160px;width:1500px;height:844px;object-fit:cover"></div>
+  <div class="layer bd a" style="left:420px;top:0;width:1500px;height:380px;overflow:hidden"><img src="assets/slowhorses-bg.jpg" alt="" style="position:absolute;left:0;top:-160px;width:1500px;height:844px;object-fit:cover"></div>
+  <div style="left:420px;top:0;width:760px;height:380px;background:linear-gradient(90deg,#0B0E14 0%,rgba(11,14,20,.82) 30%,rgba(11,14,20,0) 100%)"></div>
+  <div style="left:0;top:220px;width:1920px;height:160px;background:linear-gradient(180deg,rgba(11,14,20,0),#0B0E14)"></div>
+
+  <!-- banner text for a focused service: plain-text name in Display, counts, what's popular -->
+  <div class="layer hero b" style="left:0;top:0;width:1920px;height:380px">
+    <div class="t-display shadowed nowrap" style="left:96px;top:96px">Netflix</div>
+    <div class="t-meta nowrap" style="left:96px;top:196px">3,580 series<span class="sep"></span>4,709 movies<span class="sep"></span>76 new this week</div>
+    <div class="t-body shadowed nowrap" style="left:96px;top:244px">Popular now: FROM, The Diplomat, Black Doves</div>
+  </div>
+  <div class="layer hero a" style="left:0;top:0;width:1920px;height:380px">
+    <div class="t-display shadowed nowrap" style="left:96px;top:96px">Apple TV</div>
+    <div class="t-meta nowrap" style="left:96px;top:196px">228 series<span class="sep"></span>132 movies<span class="sep"></span>5 new this week</div>
+    <div class="t-body shadowed nowrap" style="left:96px;top:244px">Popular now: Nocturne, Slow Horses, Dark Matter</div>
+  </div>
+
+  <!-- focused row: Services -->
+  <div class="rowtitle t-head" style="top:460px">Services</div>
+  <div class="card svc t-netflix f-b" style="left:96px;top:524px"><img class="cover" src="assets/fauda-bg.jpg" alt=""><div class="shade"></div><div class="name">Netflix</div><div class="meta">76 new this week</div></div>
+  <div class="card svc t-apple f-a" style="left:592px;top:524px"><img class="cover" src="assets/slowhorses-bg.jpg" alt=""><div class="shade"></div><div class="name">Apple TV</div><div class="meta">5 new this week</div></div>
+  <div class="card svc t-disney" style="left:1088px;top:524px"><img class="cover" src="assets/bear-bg.jpg" alt=""><div class="shade"></div><div class="name">Disney+</div><div class="meta">16 new this week</div></div>
+  <div class="card svc t-hbo" style="left:1584px;top:524px"><img class="cover" src="assets/got-bg.jpg" alt=""><div class="shade"></div><div class="name">HBO Max</div><div class="meta">80 new this week</div></div>
+
+  <!-- next row stays visible below -->
+  <div class="rowtitle t-head" style="top:826px;color:var(--meta)">Popular movies</div>
+  <div class="card tile" style="left:96px;top:900px"><img class="cover" src="assets/oppenheimer-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="13000"><img src="assets/oppenheimer-logo.png" alt=""></div></div>
+  <div class="card tile" style="left:592px;top:900px"><img class="cover" src="assets/dune-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="13000"><img src="assets/dune-logo.png" alt=""></div></div>
+  <div class="card tile" style="left:1088px;top:900px"><img class="cover" src="assets/interstellar-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="13000"><img src="assets/interstellar-logo.png" alt=""></div></div>
+  <div class="card tile" style="left:1584px;top:900px"><img class="cover" src="assets/sintel-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="13000"><img src="assets/sintel-logo.png" alt=""></div></div>
+</div>
+<script src="mock.js"></script>
+</body></html>

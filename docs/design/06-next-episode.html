@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>06 Next episode</title>
+<link rel="stylesheet" href="mock.css">
+<style>
+  /* State B: the credits roll full screen, no chrome. State A (PNG): credits detected. The picture keeps playing but
+     shrinks into the top-left corner (scale + translate on the travel curve, card radius), and the Up next panel takes
+     the right side with the countdown running. Next episode is the only button and has focus: OK plays it now, Back
+     grows the picture back and dismisses the panel. */
+  .frame { left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; border-radius: 0; overflow: hidden;
+    transition: transform 200ms var(--fade-out), border-radius 200ms linear, box-shadow 200ms linear; }
+  .a .frame { transform: translate(96px, 210px) scale(.5); border-radius: 28px; box-shadow: var(--shadow);
+    transition: transform 420ms var(--move), border-radius 420ms linear, box-shadow 420ms linear; }
+  .credits { left: 0; top: 0; width: 100%; height: 100%; background: #050608; }
+  .roll { left: 0; width: 1920px; top: 210px; text-align: center; color: rgba(255,255,255,.82); font-size: 34px; line-height: 52px; }
+  .roll .role { color: rgba(255,255,255,.5); font-size: 26px; letter-spacing: .12em; text-transform: uppercase; margin-top: 44px; }
+  .a .roll { transform: translateY(-40px); transition: transform 5200ms linear; }
+
+  .page { left: 0; top: 0; width: 100%; height: 100%; background: var(--ink); }
+
+  .upnext { left: 1112px; top: 346px; width: 712px; height: 400px; opacity: 0; transform: translateY(24px);
+    transition: transform 160ms var(--fade-out), opacity 160ms var(--fade-out); }
+  .a .upnext { opacity: 1; transform: none; transition: transform var(--t-pop) var(--move), opacity var(--t-pop) var(--fade-in); }
+  .thumb { left: 0; top: 0; width: 320px; height: 180px; border-radius: 14px; overflow: hidden; background: var(--panel); box-shadow: var(--shadow); }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .info { left: 348px; top: 0; width: 364px; }
+  .info .t-meta { margin: 0; }
+  .ready { display: inline-flex; align-items: center; gap: 10px; color: var(--ok); }
+  .ready .dot { width: 14px; height: 14px; }
+
+  .actions { left: 0; top: 232px; display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
+  .actions .btn { min-width: 470px; justify-content: flex-start; }
+  .count { position: relative; overflow: hidden; }
+  .count .drain { position: absolute; left: 0; bottom: 0; height: 6px; width: 100%; background: rgba(11,14,20,.45); transform-origin: left; transform: scaleX(0); }
+  .a .count .drain { transform: scaleX(1); transition: transform 5200ms linear; }
+  .hint { left: 0; top: 352px; width: 712px; }
+</style></head>
+<body>
+<div class="stage a" data-hold-a="5200" data-hold-b="2400">
+  <div class="page"></div>
+  <div class="frame layer">
+  <div class="credits"></div>
+  <!-- made-up credits, standing in for the end roll -->
+  <div class="roll">
+    <div class="role">Executive producers</div>
+    <div>Mara Ellison</div><div>Tobias Wren</div><div>Junie Okafor</div>
+    <div class="role">Director of photography</div>
+    <div>Hal Brennan</div>
+    <div class="role">Edited by</div>
+    <div>Sofia Lind</div>
+    <div class="role">Music by</div>
+    <div>The Harbor Quartet</div>
+  </div>
+  </div>
+
+  <div class="upnext layer">
+    <div class="thumb"><img src="assets/bb-s2e4.jpg" alt=""></div>
+    <div class="info layer">
+      <div class="t-meta rel">Up next</div>
+      <div class="t-head rel">S2:E4<span class="sep"></span>Down</div>
+      <div class="t-meta rel"><span class="ready"><i class="dot"></i>Ready</span><span class="sep"></span>47 min</div>
+    </div>
+    <div class="actions">
+      <div class="btn primary focus count"><svg class="i"><use href="#i-play"/></svg>Next episode in 8<i class="drain"></i></div>
+    </div>
+    <div class="hint t-meta">Plays automatically<span class="sep"></span>Back to watch the credits</div>
+  </div>
+</div>
+<script src="mock.js"></script>
+</body></html>

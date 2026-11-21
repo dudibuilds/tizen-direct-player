@@ -1,0 +1,30 @@
+<Project Sdk="Tizen.NET.Sdk/1.2.1">
+  <PropertyGroup>
+    <TargetFramework>tizen50</TargetFramework>
+    <TizenNetPackageVersion>5.0.0.14629</TizenNetPackageVersion>
+    <OutputType>Exe</OutputType>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <Import Project="../core/Core.props" />
+  <ItemGroup>
+    <PackageReference Include="MonoTorrent" Version="3.0.2" />
+    <!-- Agent API keys ({"keys":[...]}, the host's key file format). scripts/package-probe.sh generates them under the
+         ignored artifacts/ folder and passes -p:ApiKeysPath=...; without it the app runs with the API off. -->
+    <EmbeddedResource Include="$(ApiKeysPath)" LogicalName="Ru7100Probe.api-keys.json" Condition="'$(ApiKeysPath)' != ''" />
+  </ItemGroup>
+  <!-- Remote UI dev mode (docs/remote-ui.md): -p:RemoteUi=true -p:RemoteUiConfigPath=artifacts/ru7100-remote-ui.json
+       builds a thin client that paints frames from the Mac dev host (devhost/). Never in a normal or release package. -->
+  <PropertyGroup Condition="'$(RemoteUi)' == 'true'">
+    <DefineConstants>$(DefineConstants);REMOTE_UI</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(RemoteUi)' != 'true'">
+    <Compile Remove="Tizen/RemoteUi/**" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(RemoteUi)' == 'true'">
+    <Compile Include="../devhost/Protocol/**/*.cs" LinkBase="RemoteUiProtocol" />
+    <EmbeddedResource Include="$(RemoteUiConfigPath)" LogicalName="Ru7100Probe.remote-ui.json" />
+  </ItemGroup>
+  <Target Name="Ru7100CheckRemoteUiConfig" BeforeTargets="BeforeBuild" Condition="'$(RemoteUi)' == 'true' And !Exists('$(RemoteUiConfigPath)')">
+    <Error Text="RemoteUi=true needs RemoteUiConfigPath pointing at the remote UI config (scripts/tv-dev.sh --remote-ui creates it)." />
+  </Target>
+</Project>

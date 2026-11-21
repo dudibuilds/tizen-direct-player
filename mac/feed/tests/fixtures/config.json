@@ -1,0 +1,42 @@
+{
+ "sources": {
+  "cinemeta": {
+   "genreCatalogs": 2
+  },
+  "catalogAddons": {
+   "manifests": [
+    {
+     "url": "https://streaming-catalogs.example/manifest.json",
+     "label": "Netflix",
+     "trustedNew": true
+    }
+   ]
+  }
+ },
+ "rows": {
+  "rowSize": 5,
+  "becauseRows": 3,
+  "becauseRowSize": 4,
+  "becauseMinItems": 2
+ },
+ "fallback": {
+  "minTotalItems": 10,
+  "minRowItems": {
+   "new-for-you": 3,
+   "top-picks": 2
+  },
+  "minBecauseRows": 1
+ },
+ "playability": {
+  "streamAddonUrl": "https://torrentio.strem.fun/manifest.json"
+ },
+ "filters": {
+  "language": {
+   "preferred": "es",
+   "preferredCountries": [
+    "Spain"
+   ],
+   "foreign": "dub_or_preferred_subs"
+  }
+ }
+}

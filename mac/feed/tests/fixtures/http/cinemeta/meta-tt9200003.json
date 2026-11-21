@@ -1,0 +1,26 @@
+{
+ "meta": {
+  "id": "tt9200003",
+  "imdb_id": "tt9200003",
+  "type": "movie",
+  "name": "Sunny Days",
+  "releaseInfo": "2022",
+  "released": "2022-06-10T00:00:00.000Z",
+  "imdbRating": "5.9",
+  "genres": [
+   "Comedy",
+   "Romance"
+  ],
+  "genre": [
+   "Comedy",
+   "Romance"
+  ],
+  "country": "United States",
+  "director": [
+   "Kim Bright"
+  ],
+  "writer": [],
+  "cast": [],
+  "poster": "https://images.metahub.space/poster/small/tt9200003/img"
+ }
+}

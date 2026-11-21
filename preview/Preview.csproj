@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Browser preview of the TV UI: hosts the same core/Ui view-models and renders UiLayout frames as HTML. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <!-- Same language level as the TV build, so core/ stays C# 8 clean here too. -->
+    <LangVersion>8.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>Ru7100.Preview</RootNamespace>
+  </PropertyGroup>
+  <Import Project="../core/Core.props" />
+  <ItemGroup>
+    <!-- The TV's portable probe code (torrent opener, loopback media server, subtitles), as the tests compile it. -->
+    <Compile Include="../probe/**/*.cs" Exclude="../probe/Program.cs;../probe/Tizen/**;../probe/obj/**;../probe/bin/**" LinkBase="probe" />
+    <PackageReference Include="MonoTorrent" Version="3.0.2" />
+    <!-- The Mac host's simulated player and torrent opener, so the live preview runs the real PlaybackSession. -->
+    <Compile Include="../host/Simulation.cs" LinkBase="host" />
+    <EmbeddedResource Include="../probe/probe.en.srt" LogicalName="probe.en.srt" WithCulture="false" />
+    <EmbeddedResource Include="fixtures/cinemeta.json" LogicalName="cinemeta.json" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Remote UI dev host (docs/remote-ui.md): runs the TV app's composition (core/App AppHost, core/Ui TvShell and
+       layout) on the Mac and drives a TV running the remote UI client (scripts/tv-dev.sh with the remote-ui option). Player and
+       source-opener calls run on the TV; media never passes through the Mac. Dev only. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <!-- Same language level as the TV build, so core/ stays C# 8 clean here too. -->
+    <LangVersion>8.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>Ru7100.DevHost</RootNamespace>
+    <AssemblyName>ru7100-devhost</AssemblyName>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <Import Project="../core/Core.props" />
+</Project>

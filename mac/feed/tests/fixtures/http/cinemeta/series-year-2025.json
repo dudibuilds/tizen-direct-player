@@ -1,0 +1,46 @@
+{
+ "metas": [
+  {
+   "id": "tt9300022",
+   "imdb_id": "tt9300022",
+   "type": "series",
+   "name": "Glass City",
+   "releaseInfo": "2025–",
+   "released": "2025-09-01T00:00:00.000Z",
+   "imdbRating": "7.4",
+   "genres": [
+    "Drama",
+    "Sci-Fi"
+   ],
+   "genre": [
+    "Drama",
+    "Sci-Fi"
+   ],
+   "country": "United States",
+   "director": [],
+   "writer": [],
+   "cast": [
+    "Owen Hale"
+   ],
+   "poster": "https://images.metahub.space/poster/small/tt9300022/img",
+   "videos": [
+    {
+     "id": "tt9300022:1:1",
+     "season": 1,
+     "episode": 1,
+     "number": 1,
+     "name": "Episode 1",
+     "released": "2025-09-01T12:00:00.000Z"
+    },
+    {
+     "id": "tt9300022:2:1",
+     "season": 2,
+     "episode": 1,
+     "number": 1,
+     "name": "Episode 1",
+     "released": "2026-09-10T12:00:00.000Z"
+    }
+   ]
+  }
+ ]
+}

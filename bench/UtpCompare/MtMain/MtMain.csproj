@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- MonoTorrent main branch uTP (src/MonoTorrent.Connections/.../Utp). Build with
+       -p:MonoTorrentSrc=/path/to/monotorrent/src (a clone outside this repository). The assembly name "Benchmark" is
+       one MonoTorrent grants InternalsVisibleTo, so the driver can read the in-flight byte count. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Benchmark</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../Shared/*.cs" />
+    <ProjectReference Include="$(MonoTorrentSrc)/MonoTorrent.Connections/MonoTorrent.Connections.csproj" />
+  </ItemGroup>
+</Project>

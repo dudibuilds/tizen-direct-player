@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>11 Service page</title>
+<link rel="stylesheet" href="mock.css">
+<style>
+  /* The page for one service. Everything on it belongs to that service: its own front page, popularity list,
+     new arrivals and genres. The service name sits where Home has its menu, as plain Title text; the chips beside it
+     are the service's own menu (amber outline = where you are, white fill = focus). The billboard and rows reuse
+     Home's components unchanged. Back returns to Home with focus on the service card.
+     Service tint (Apple TV: steel blue): the page ink, the scrims and a soft glow behind the name shift toward the
+     tint. Focus, amber and green keep their meanings; text, chips and badges are untouched. ?tint=off shows plain ink.
+     State B: the page entering (header and rows travel in 40 px and fade). State A: settled, focus on card 2. */
+  .stage { --ink: 14,22,34; --tint: 60,90,122; background: rgb(var(--ink)); }
+  html.notint .stage { --ink: 11,14,20; --tint: 11,14,20; }
+  .glow { left: -360px; top: -420px; width: 1500px; height: 1100px;
+    background: radial-gradient(closest-side, rgba(var(--tint),.72), rgba(var(--tint),.3) 55%, rgba(var(--tint),0)); }
+  .head { left: 96px; top: 76px; display: flex; align-items: center; gap: 56px; height: 72px; }
+  .head .crumb { position: absolute; left: 0; top: -34px; }
+  .chips { display: flex; gap: 16px; }
+  .chips .chip { position: static; }
+
+  .enter { opacity: 0; transform: translateY(40px); transition: opacity 120ms var(--fade-out), transform 120ms var(--fade-out); }
+  .a .enter { opacity: 1; transform: none; transition: opacity 240ms var(--fade-in), transform var(--t-scroll) var(--move); }
+  .a .enter.d1 { transition-delay: 60ms; } .a .enter.d2 { transition-delay: 120ms; }
+
+  .rowtitle { left: 96px; }
+  .tile { width: 464px; height: 261px; }
+  /* every row ends with a See all tile: opens Browse with the Service filter set (12-services-all.html) */
+  .seeall { width: 464px; height: 261px; border-radius: 14px; background: rgba(255,255,255,.06); border: 1.5px solid rgba(255,255,255,.14);
+    display: flex; align-items: center; justify-content: center; gap: 14px; font-size: 34px; font-weight: 600; flex-direction: row-reverse; }
+  .rowtitle .count { font-size: 28px; font-weight: 500; color: var(--meta); margin-left: 18px; }
+</style></head>
+<body>
+<script>if (new URLSearchParams(location.search).get('tint') === 'off') document.documentElement.classList.add('notint');</script>
+<div class="stage a" data-hold-a="5600" data-hold-b="1600">
+  <!-- backdrop: the focused title, under scrims in the service's ink -->
+  <div class="layer" style="left:420px;top:0;width:1500px;height:844px"><img class="cover" src="assets/slowhorses-bg.jpg" alt=""></div>
+  <div style="left:420px;top:0;width:760px;height:844px;background:linear-gradient(90deg,rgb(var(--ink)) 0%,rgba(var(--ink),.82) 30%,rgba(var(--ink),0) 100%)"></div>
+  <div style="left:0;top:250px;width:1920px;height:600px;background:linear-gradient(180deg,rgba(var(--ink),0) 0%,rgba(var(--ink),.75) 32%,rgb(var(--ink)) 46%)"></div>
+  <div style="left:0;top:0;width:100%;height:180px;background:linear-gradient(180deg,rgba(var(--ink),.7),rgba(var(--ink),0))"></div>
+  <div class="glow"></div>
+
+  <!-- service header: plain-text name + the service's own menu -->
+  <div class="head enter">
+    <div class="crumb t-meta nowrap">Services</div>
+    <div class="t-title nowrap">Apple TV</div>
+    <div class="chips">
+      <div class="chip sel">Home</div><div class="chip">Series</div><div class="chip">Movies</div>
+      <div class="chip">Genres<svg class="i" style="width:28px;height:28px"><use href="#i-down"/></svg></div>
+    </div>
+  </div>
+
+  <!-- billboard: Home's compact hero for the focused title -->
+  <div class="layer enter d1" style="left:0;top:0;width:1920px;height:440px">
+    <div class="t-meta white nowrap" style="left:96px;top:176px"><span class="badge accent" style="margin-right:14px">2</span>Popular in the US</div>
+    <div class="layer" data-area="42000" style="left:96px;top:222px;width:420px;height:96px"><img src="assets/slowhorses-logo.png" alt="Slow Horses"></div>
+    <div class="t-meta nowrap" style="left:96px;top:326px">Series<span class="sep"></span>2022–<span class="sep"></span>5 seasons<span class="sep"></span><span class="white">★ 8.2</span><span class="sep"></span>Thriller, Drama</div>
+    <div class="t-body shadowed" style="left:96px;top:368px;width:900px;height:48px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">A dysfunctional team of MI5 agents, banished to Slough House, keep stumbling into…</div>
+  </div>
+
+  <!-- first row: popularity in the US, rank badges as on Home's Top 10 -->
+  <div class="rowtitle t-head enter d1" style="top:446px">Popular in the US</div>
+  <div class="layer enter d2" style="left:0;top:0;width:1920px;height:1080px">
+    <div class="card tile" style="left:96px;top:520px"><img class="cover" src="assets/nocturne-bg.jpg" alt=""><div class="rank">1</div></div>
+    <div class="card tile focus" style="left:592px;top:520px"><img class="cover" src="assets/slowhorses-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="13000"><img src="assets/slowhorses-logo.png" alt=""></div><div class="rank">2</div></div>
+    <div class="card tile" style="left:1088px;top:520px"><img class="cover" src="assets/darkmatter-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="13000"><img src="assets/darkmatter-logo.png" alt=""></div><div class="rank">3</div></div>
+    <div class="card tile" style="left:1584px;top:520px"><img class="cover" src="assets/stick-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="13000"><img src="assets/stick-logo.png" alt=""></div><div class="rank">4</div></div>
+
+    <!-- next row: new arrivals on the service, ending in See all -->
+    <div class="rowtitle t-head nowrap" style="top:822px">New on Apple TV<span class="count">This week</span></div>
+    <div class="card tile" style="left:96px;top:892px"><img class="cover" src="assets/twelve-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="13000"><img src="assets/twelve-logo.png" alt=""></div></div>
+    <div class="card tile" style="left:592px;top:892px"><img class="cover" src="assets/awkwafina-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="13000"><img src="assets/awkwafina-logo.png" alt=""></div></div>
+    <div class="card tile" style="left:1088px;top:892px"><img class="cover" src="assets/stick-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="13000"><img src="assets/stick-logo.png" alt=""></div></div>
+    <div class="seeall" style="left:1584px;top:892px"><svg class="i"><use href="#i-right"/></svg>See all</div>
+  </div>
+</div>
+<script src="mock.js"></script>
+</body></html>

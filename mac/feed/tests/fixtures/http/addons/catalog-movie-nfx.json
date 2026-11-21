@@ -1,0 +1,57 @@
+{
+ "metas": [
+  {
+   "id": "tt9300018",
+   "imdb_id": "tt9300018",
+   "type": "movie",
+   "name": "Fresh Pick",
+   "releaseInfo": "2026",
+   "released": "2026-11-10T00:00:00.000Z",
+   "imdbRating": "",
+   "genres": [
+    "Crime",
+    "Mystery"
+   ],
+   "genre": [
+    "Crime",
+    "Mystery"
+   ],
+   "country": "United States",
+   "director": [],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300018/img"
+  },
+  {
+   "id": "tt9300002",
+   "imdb_id": "tt9300002",
+   "type": "movie",
+   "name": "Crown of Paper",
+   "releaseInfo": "2026",
+   "released": "2026-09-01T00:00:00.000Z",
+   "imdbRating": "7.1",
+   "genres": [
+    "Crime",
+    "Drama"
+   ],
+   "genre": [
+    "Crime",
+    "Drama"
+   ],
+   "country": "United Kingdom",
+   "director": [
+    "Leo Hart"
+   ],
+   "writer": [],
+   "cast": [
+    "Rosa Vale"
+   ],
+   "poster": "https://images.metahub.space/poster/small/tt9300002/img"
+  },
+  {
+   "id": "tmdb:12345",
+   "type": "movie",
+   "name": "No IMDb id"
+  }
+ ]
+}

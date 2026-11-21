@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Baseline: our managed uTP (probe/Sources/Utp), without the MonoTorrent glue. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>UtpCompare.Ours</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../Shared/*.cs" />
+    <Compile Include="../../../probe/Sources/Utp/UtpConnection.cs;../../../probe/Sources/Utp/UtpContext.cs;../../../probe/Sources/Utp/UtpPacket.cs;../../../probe/Sources/Utp/UtpUdpSocket.cs" LinkBase="Utp" />
+  </ItemGroup>
+</Project>

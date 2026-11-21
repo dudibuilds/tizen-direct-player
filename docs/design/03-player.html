@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>03 Player</title>
+<link rel="stylesheet" href="mock.css">
+<style>
+  /* State A (PNG): Audio & subtitles sheet open on the right edge. State B: sheet closed, full transport, focus on Play/Pause. */
+  .dim { left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,.4); opacity: 0; transition: opacity 160ms var(--fade-out); }
+  .a .dim { opacity: 1; transition: opacity 240ms var(--fade-in); }
+
+  .cue { left: 0; width: 1920px; top: 742px; text-align: center; font-size: 46px; line-height: 60px; font-weight: 600; color: #F5F5F5;
+    -webkit-text-stroke: 6px #000; paint-order: stroke fill; text-shadow: 0 2px 6px rgba(0,0,0,.7); transition: transform var(--t-sheet) var(--move); }
+  .a .cue { transform: translateX(-400px); }
+
+  .bar { left: 96px; top: 918px; width: 1728px; height: 10px; transition: width var(--t-sheet) var(--move); }
+  .a .bar { width: 928px; }
+  .bar .track { left: 0; right: 0; top: 2px; height: 6px; border-radius: 3px; background: rgba(255,255,255,.2); }
+  .bar .buf { left: 0; top: 2px; height: 6px; width: 58%; border-radius: 3px; background: rgba(255,255,255,.45); }
+  .bar .fill { left: 0; top: 2px; height: 6px; width: 45%; border-radius: 3px; background: var(--accent); }
+  .bar .head { left: 45%; top: -9px; width: 28px; height: 28px; margin-left: -14px; border-radius: 50%; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,.5); }
+  .time { top: 862px; font-size: 34px; line-height: 44px; font-weight: 600; }
+  .time.r { left: 1624px; width: 200px; text-align: right; transition: transform var(--t-sheet) var(--move); }
+  .a .time.r { transform: translateX(-800px); }
+
+  .ctl { top: 950px; display: flex; gap: 20px; align-items: center; transition: opacity 200ms linear; }
+  .ctl .btn { height: 72px; padding: 0 28px; font-size: 30px; }
+  .a .ctl.left { opacity: .45; }
+  .a .ctl.right { opacity: 0; }
+  .stage:not(.a) .pp { background: var(--focus-fill); border-color: var(--focus-fill); color: #0B0E14; transform: scale(1.1); }
+
+  .sheet { left: 920px; top: 0; width: 1000px; height: 1080px; opacity: 0; transform: translateX(48px); transition: transform 160ms var(--fade-out), opacity 160ms var(--fade-out); }
+  .a .sheet { opacity: 1; transform: none; transition: transform var(--t-sheet) var(--move), opacity var(--t-sheet) var(--fade-in); }
+  .sheet .bg { left: 0; top: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(11,14,20,0) 0, rgba(11,14,20,.55) 90px, rgba(11,14,20,.95) 200px, rgba(11,14,20,.97) 100%); }
+  .sheet .body { left: 248px; top: 0; width: 656px; height: 1080px; }
+  .sheet h2 { margin: 0; left: 24px; top: 62px; }
+  .group { left: 24px; }
+  .sheet .row { left: 0; width: 656px; }
+  .hair { left: 24px; right: 24px; height: 1px; background: rgba(255,255,255,.1); }
+</style></head>
+<body>
+<div class="stage a" data-hold-a="5200" data-hold-b="3000">
+  <!-- paused video frame -->
+  <img class="cover" src="assets/bb-s2e3.jpg" alt="">
+  <!-- gradients instead of bands -->
+  <div class="v-top"></div><div class="v-bottom"></div>
+  <div class="dim"></div>
+
+  <div class="t-title shadowed" style="left:96px;top:54px">Breaking Bad</div>
+  <div class="t-body shadowed" style="left:96px;top:124px">S2:E3<span class="sep"></span>Bit by a Dead Bee</div>
+
+  <!-- subtitle cue: one app layer, raised 150 px while the transport shows, re-centred in the free area when a sheet opens -->
+  <div class="cue">We need to get our versions straight.</div>
+
+  <!-- transport -->
+  <div class="time shadowed" style="left:96px">22:03</div>
+  <div class="time r shadowed">-26:57</div>
+  <div class="bar layer"><div class="track"></div><div class="buf"></div><div class="fill"></div><div class="head"></div></div>
+  <div class="ctl left" style="left:96px">
+    <div class="ibtn pp"><svg class="i"><use href="#i-play"/></svg></div>
+    <div class="ibtn"><svg class="i"><use href="#i-rew"/></svg></div>
+    <div class="ibtn"><svg class="i"><use href="#i-ffw"/></svg></div>
+    <div class="ibtn"><svg class="i"><use href="#i-next"/></svg></div>
+  </div>
+  <div class="ctl right" style="right:96px">
+    <div class="btn"><svg class="i"><use href="#i-subs"/></svg>Audio &amp; subtitles</div>
+    <div class="btn"><svg class="i"><use href="#i-eps"/></svg>Episodes</div>
+    <div class="btn"><svg class="i"><use href="#i-layers"/></svg>Sources</div>
+    <div class="ibtn"><svg class="i"><use href="#i-gear"/></svg></div>
+  </div>
+
+  <!-- right-edge sheet -->
+  <div class="sheet layer">
+    <div class="bg"></div>
+    <div class="body layer">
+      <h2 class="t-head">Audio &amp; subtitles</h2>
+
+      <div class="group t-meta" style="top:146px">Audio</div>
+      <div class="row" style="top:190px"><svg class="tick"><use href="#i-check"/></svg>English<span class="val">5.1</span></div>
+      <div class="row" style="top:266px"><svg class="tick off"><use href="#i-check"/></svg>Russian<span class="val">Stereo</span></div>
+
+      <div class="group t-meta" style="top:372px">Subtitles</div>
+      <div class="row" style="top:416px"><svg class="tick off"><use href="#i-check"/></svg>Off</div>
+      <div class="row" style="top:492px"><svg class="tick"><use href="#i-check"/></svg>Spanish<span class="val">OpenSubtitles</span></div>
+      <div class="row focus" style="top:568px"><svg class="tick off"><use href="#i-check"/></svg>English<span class="val">OpenSubtitles</span></div>
+
+      <div class="hair" style="top:666px"></div>
+      <div class="row" style="top:688px">Subtitle style<span class="val">White, outline<svg class="i" style="width:26px;height:26px;opacity:.6"><use href="#i-right"/></svg></span></div>
+      <div class="row" style="top:764px">Size<span class="val"><svg class="i" style="width:26px;height:26px;opacity:.6"><use href="#i-left"/></svg>Medium<svg class="i" style="width:26px;height:26px;opacity:.6"><use href="#i-right"/></svg></span></div>
+      <div class="row" style="top:840px">Timing<span class="val"><svg class="i" style="width:26px;height:26px;opacity:.6"><use href="#i-left"/></svg>In sync<svg class="i" style="width:26px;height:26px;opacity:.6"><use href="#i-right"/></svg></span></div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+</body></html>

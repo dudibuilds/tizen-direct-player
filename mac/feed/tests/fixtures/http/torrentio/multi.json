@@ -1,0 +1,22 @@
+{
+ "streams": [
+  {
+   "name": "Torrentio\n1080p",
+   "title": "Kingdom.Road.S01E01.KOREAN.1080p.WEB.H264-GRP\n👤 30 💾 1.9 GB ⚙️ 1337x\n🇰🇷",
+   "infoHash": "cc1807ed8c86a8edbfb0d260718e451fcf90aa24",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|x"
+   }
+  },
+  {
+   "name": "Torrentio\n1080p",
+   "title": "Kingdom.Road.S01E01.1080p.NF.WEB-DL.DUAL.DDP5.1.H.264-GRP\n👤 45 💾 2.2 GB ⚙️ 1337x\nDual Audio",
+   "infoHash": "48d142e91b84f43122d7783fbdd971456db859b9",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|x"
+   }
+  }
+ ]
+}

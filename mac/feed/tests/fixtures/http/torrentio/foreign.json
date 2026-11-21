@@ -1,0 +1,22 @@
+{
+ "streams": [
+  {
+   "name": "Torrentio\n1080p",
+   "title": "Quiet.Fields.2026.FRENCH.1080p.WEB.H264-GRP\n👤 40 💾 2.1 GB ⚙️ Torrent9\n🇫🇷",
+   "infoHash": "9780d1fe0dbe75f04f049d61ea9f1116e2aaf317",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|x"
+   }
+  },
+  {
+   "name": "Torrentio\n1080p",
+   "title": "Quiet.Fields.2026.VFF.720p.WEB.x264-GRP\n👤 25 💾 1.1 GB ⚙️ Torrent9\n🇫🇷",
+   "infoHash": "c008d89a12c168e6dcf5cf5da313b9094a014011",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|x"
+   }
+  }
+ ]
+}

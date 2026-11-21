@@ -1,0 +1,36 @@
+tconst	titleType	primaryTitle	originalTitle	isAdult	startYear	endYear	runtimeMinutes	genres
+tt9100001	tvSeries	Night Harbor	Night Harbor	0	2023	\N	\N	Crime,Drama,Mystery
+tt9100002	tvSeries	Glass Valley	Glass Valley	0	2025	\N	\N	Drama,Sci-Fi
+tt9100003	tvSeries	Ember Road	Ember Road	0	2025	\N	\N	Comedy
+tt9200001	movie	The Last Signal	The Last Signal	0	2024	\N	\N	Sci-Fi,Thriller
+tt9200002	movie	Paper Kings	Paper Kings	0	2023	\N	\N	Crime,Drama
+tt9200003	movie	Sunny Days	Sunny Days	0	2022	\N	\N	Comedy,Romance
+tt9200004	movie	Iron Tide	Iron Tide	0	2025	\N	\N	Action
+tt9200005	movie	Harvest Moon Diaries	Harvest Moon Diaries	0	2021	\N	\N	Drama,Romance
+tt9200006	movie	Northern Lights Heist	Northern Lights Heist	0	2024	\N	\N	Crime,Thriller
+tt9300001	movie	Signal Lost	Signal Lost	0	2026	\N	\N	Sci-Fi,Thriller
+tt9300002	movie	Crown of Paper	Crown of Paper	0	2026	\N	\N	Crime,Drama
+tt9300003	movie	Sunny Days 2	Sunny Days 2	0	2026	\N	\N	Comedy,Romance
+tt9300004	movie	Deep Orbit	Deep Orbit	0	2026	\N	\N	Sci-Fi,Adventure
+tt9300005	movie	Quiet Fields	Quiet Fields	0	2026	\N	\N	Drama
+tt9300006	movie	Low Tide Rising	Low Tide Rising	0	2026	\N	\N	Action
+tt9300007	movie	Old Classic	Old Classic	0	1999	\N	\N	Drama
+tt9300009	movie	Midnight Ledger	Midnight Ledger	0	2025	\N	\N	Crime,Thriller
+tt9300010	movie	Comedy Hour	Comedy Hour	0	2026	\N	\N	Comedy
+tt9300011	movie	Dark Water Bay	Dark Water Bay	0	2025	\N	\N	Crime,Drama,Mystery
+tt9300012	movie	The Quiet Ledger	The Quiet Ledger	0	2026	\N	\N	Crime,Drama
+tt9300013	movie	Orbital Decay	Orbital Decay	0	2025	\N	\N	Drama,Sci-Fi,Thriller
+tt9300014	movie	Faultline	Faultline	0	2024	\N	\N	Sci-Fi,Thriller
+tt9300015	movie	Red Ledger	Red Ledger	0	2025	\N	\N	Crime,Drama
+tt9300016	movie	Iron Tide 2	Iron Tide 2	0	2026	\N	\N	Action
+tt9300017	movie	Unrated Newcomer	Unrated Newcomer	0	2026	\N	\N	Drama
+tt9300018	movie	Fresh Pick	Fresh Pick	0	2026	\N	\N	Crime,Mystery
+tt9300019	movie	Future Film	Future Film	0	2027	\N	\N	Sci-Fi
+tt9300023	movie	Harbor of Lies	Harbor of Lies	0	2026	\N	\N	Crime,Mystery,Thriller
+tt9300024	movie	Static Hearts	Static Hearts	0	2026	\N	\N	Romance,Sci-Fi
+tt9100004	tvSeries	Kuro no Tsubasa	Kuro no Tsubasa	0	2026	\N	\N	Animation,Action
+tt9300008	tvSeries	Harbor Lights	Harbor Lights	0	2026	\N	\N	Crime,Mystery
+tt9300020	tvSeries	Talk Tonight	Talk Tonight	0	2026	\N	\N	Talk-Show
+tt9300021	tvSeries	Kingdom Road	Kingdom Road	0	2026	\N	\N	Drama,History
+tt9300022	tvSeries	Glass City	Glass City	0	2025	\N	\N	Drama,Sci-Fi
+tt9999999	movie	Some Other Film	Some Other Film	0	2026	\N	\N	Drama

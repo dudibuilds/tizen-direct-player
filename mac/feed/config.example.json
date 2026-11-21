@@ -1,0 +1,44 @@
+{
+  "_readme": "Copy to local-data/feed-config.json (ignored by git) and keep only what you change. Every key is optional; defaults and the full list live in mac/feed/config.py. Keys may instead come from the environment: RU7100_TMDB_API_KEY, RU7100_TMDB_READ_TOKEN, RU7100_TRAKT_CLIENT_ID, RU7100_STREMIO_AUTH_KEY. Never commit keys.",
+  "sources": {
+    "catalogAddons": {
+      "manifests": [
+        {
+          "url": "https://catalog-addon.example/your-config/manifest.json",
+          "label": "Netflix",
+          "trustedNew": true,
+          "catalogs": ["nfx"]
+        }
+      ]
+    },
+    "tmdb": {
+      "apiKey": null,
+      "readToken": null,
+      "region": "US"
+    },
+    "trakt": {
+      "clientId": null
+    }
+  },
+  "stremioLibrary": {
+    "path": null,
+    "authKey": null
+  },
+  "filters": {
+    "language": {
+      "foreign": "dub"
+    }
+  },
+  "rows": {
+    "rowSize": 20,
+    "becauseRows": 4
+  },
+  "playability": {
+    "streamAddonUrl": "https://your-stream-addon.example/manifest.json",
+    "maxChecksPerRun": 200
+  },
+  "fallback": {
+    "minTotalItems": 30,
+    "command": null
+  }
+}

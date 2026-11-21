@@ -1,0 +1,46 @@
+{
+ "id": "example.streaming-catalogs",
+ "version": "1.0.0",
+ "name": "Streaming Catalogs",
+ "resources": [
+  "catalog"
+ ],
+ "types": [
+  "movie",
+  "series"
+ ],
+ "idPrefixes": [
+  "tt"
+ ],
+ "catalogs": [
+  {
+   "type": "movie",
+   "id": "nfx",
+   "name": "Netflix",
+   "extra": [
+    {
+     "name": "skip"
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "dnp",
+   "name": "Disney+",
+   "extra": [
+    {
+     "name": "genre",
+     "isRequired": true,
+     "options": [
+      "x"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "tv",
+   "id": "channels",
+   "name": "Channels"
+  }
+ ]
+}

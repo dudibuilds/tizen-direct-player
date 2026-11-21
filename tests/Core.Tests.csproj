@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <!-- Match the TV compiler so core code that passes here also builds for tizen50. -->
+    <LangVersion>8.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <IsPackable>false</IsPackable>
+    <!-- Microsoft.NET.Test.Sdk requires 13.x; the TV build compiles the same core against 12.0.3. -->
+    <Ru7100NewtonsoftVersion>13.0.3</Ru7100NewtonsoftVersion>
+  </PropertyGroup>
+  <Import Project="../core/Core.props" />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+    <PackageReference Include="MonoTorrent" Version="3.0.2" />
+    <Compile Include="../probe/**/*.cs" Exclude="../probe/Program.cs;../probe/Tizen/**;../probe/obj/**;../probe/bin/**" LinkBase="probe" />
+    <!-- Remote UI dev mode wire protocol (shared by devhost/ and the TV dev client). -->
+    <Compile Include="../devhost/Protocol/**/*.cs" LinkBase="devhost" />
+  </ItemGroup>
+</Project>

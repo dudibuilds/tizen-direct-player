@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="5.0" package="org.dudi.ru7100probe"
+          version="0.2.0" install-location="internal-only">
+  <profile name="tv-samsung"/>
+  <ui-application appid="org.dudi.ru7100probe" exec="Ru7100Probe.dll" type="dotnet"
+                  multiple="false" taskmanage="true" nodisplay="false" launch_mode="single">
+    <label>RU7100 Direct Playback Probe</label>
+    <icon>icon.png</icon>
+    <!-- Compile the app's assemblies to native code at install (Tizen 4.0+), to cut start-up JIT time. -->
+    <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
+  </ui-application>
+  <privileges>
+    <privilege>http://tizen.org/privilege/internet</privilege>
+  </privileges>
+</manifest>

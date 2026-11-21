@@ -1,0 +1,87 @@
+{
+  "direction": "Blue-black ink (#0B0E14) with the artwork carrying the colour, white reserved for focus, and one warm amber (#FFB23E) reserved for what belongs to the viewer: watch progress, the selected option and the single primary Play button. Everything that used to be a coloured chip is neutral, so on any screen the eye lands first on the art, then on the white focus, then on amber. Chrome melts into the picture: gradients replace bands, player panels become right-edge sheets on one dim layer, and the transport has real parts (playhead, buffered range, elapsed and remaining). Type drops to four working sizes with visible jumps (28, 34, 40, 56) so metadata clearly sits below prose from 3 m. Motion uses two curves, one for travel and scale and one pair for fades, with exits shorter than entrances. All of it is flat fills, pre-rendered gradients, 9-slice shadows, translate, scale and opacity, so it fits the EvasImage painter.",
+  "adjustments": "1) Play focus: the synthesis says Play is always amber and focused buttons fill white; these collide on the title page where Play has focus by default. Play keeps amber and takes the white ring (the card focus language) plus 1.04 scale; every other button fills #F2F2F2. 2) Rating star is white, not #F5C518: IMDb yellow beside amber gives two near-identical yellows. 3) Player progress is amber (synthesis) rather than white (player reviewer), so progress looks the same on cards, episode stills and the transport; the playhead and the start card's loading line are white because they are not watch progress. 4) Pop-out card grows from its left edge and pushes its right neighbours 208 px instead of growing from centre over both neighbours; the row below dims to 38% and its title fades out. Nothing in the focused row is covered and no text is sliced (B2, DB8). 5) List-row focus is white at 15% (the reviewers wrote #FFFFFF26, about the same). 6) Episodes on the title page are a horizontal rail of stills using the card ring, instead of a vertical list; the info block under the logo follows the focused episode. 7) The transport gets labelled buttons for Audio & subtitles, Episodes and Sources so Sources is two presses away (P4); this goes beyond the design findings. 8) Type ramp: 26 px stays, for badges only.",
+  "screens": [
+    {
+      "file": "00-system.html", "png": "00-system.png", "before": null, "title": "Design system",
+      "addresses": ["DB1", "DB3", "DB9", "DB10", "DB11", "DB13", "DB16", "DB17", "DP2", "DP5", "DP6", "DP9", "DP11", "DP14"],
+      "notes": [
+        "Palette with hex and usage; amber, ember and ice shown side by side on the same four uses.",
+        "Type ramp 56/40/34/28 plus Display 72 and Label 26; subtitle default 46 semibold with a 3 px outline, shown in English and Spanish.",
+        "Three focus rules in one colour: card ring, button fill, list-row soft fill. Demos loop.",
+        "Buttons, icon buttons, chips, neutral quality badges, watch progress and the transport bar at real size.",
+        "Solid Top 10 rank badge on the poster corner; dark-logo rule shown on Severance (light plate or Display text).",
+        "Motion: move curve against today's ease-out, pop-out, fade, player overlay and edge sheet, each looping, plus a duration table."
+      ],
+      "implementation": "Tokens map onto UiTheme/UiScale/UiAnimator. Gradients and the soft shadow are pre-rendered PNGs (shadow as a 9-slice with border scaling). Icons are white glyph PNGs tinted with EvasImage colour. The rank badge needs one corner-rounded image. Logo luminance is measured once when the logo is cached, never per frame."
+    },
+    {
+      "file": "01-home.html", "png": "01-home.png", "before": "01-home-before.png", "title": "Home",
+      "addresses": ["DB1", "DB2", "DB7", "DB8", "DB12", "DB13", "DB16", "B2", "B8", "B15"],
+      "notes": [
+        "Wordmark and a current-section marker in the menu; labels drop to meta grey so the hero leads.",
+        "Compact hero: logo fitted by area, a quiet 28 px facts line, 34 px synopsis; a top scrim keeps the menu readable on bright art.",
+        "The pop-out card stays. It grows from its left edge and pushes the right neighbours over, with a soft shadow, a #1E2530 panel and amber Play. Row title and billboard text are never covered.",
+        "The row below dims and its title fades while a card is popped; rows above are fully hidden, so no ghosted half-letters.",
+        "Card panel shows plain availability (Ready to play, HD, Spanish subs) instead of repeating the facts line.",
+        "Also rendered: 01-home-focused.png (before the pop), 01-home-ember.png and 01-home-ice.png."
+      ],
+      "implementation": "Pop-out is a rect interpolation (x, y, w, h) plus a translate on the right neighbours and opacity on the row below; panel fades after 80 ms. Shadow is a 9-slice image. Backdrop swap waits for 300 ms of rest so the RU7100 decodes one image per stop. The Interstellar logo's glow is cut by its canvas; feather logo edges once at cache time when edge alpha is above ~10%."
+    },
+    {
+      "file": "02-title.html", "png": "02-title.png", "before": "02-title-before.png", "title": "Title page",
+      "addresses": ["DB4", "DB5", "DB6", "B8", "B9", "B10"],
+      "notes": [
+        "One primary action: amber Resume S2:E3. Trailer, library, rate and More (Sources, Binge, Mark watched) are 72 px icon buttons; the focused one shows its label.",
+        "Facts are 28 px grey with a white star; the bold source line is replaced by HD and Spanish subs badges. Size, channels and peers live in the Sources picker.",
+        "Full-bleed backdrop shifted right with two scrims; the lower 40% holds the episode rail.",
+        "Episodes are stills with the card ring, amber progress on the still and a watched tick on its corner; season tabs mark the selected season with the amber underline.",
+        "02-title-episode-focus.png shows focus on episode 3: Play stays amber, the info block swaps to the episode."
+      ],
+      "implementation": "Same card component as Home at 448x252. Info swap is two text blocks cross-fading over 120 ms. Scrims are two stretched gradient images."
+    },
+    {
+      "file": "03-player.html", "png": "03-player.png", "before": "03-player-before.png", "title": "Player overlay with Audio & subtitles sheet",
+      "addresses": ["DP1", "DP3", "DP4", "DP5", "DP6", "DP9", "DP11", "DP14", "DP15", "P4", "P6", "P12"],
+      "notes": [
+        "Top and bottom gradients replace the two black bands; one 40% dim sits under any open panel.",
+        "Real transport: play/pause glyph, amber played range, buffered range, white playhead, elapsed and remaining time.",
+        "Right-edge sheet with a 200 px gradient lead-in; rows 76 px, soft-fill focus, amber tick for the selected track; no More above label.",
+        "Size and Timing read Medium and In sync with icon chevrons, not 42 and 0.00 s.",
+        "The subtitle cue moves to the centre of the free area while a sheet is open, so style changes can be judged live.",
+        "03-player-transport.png shows the sheet closed, with direct buttons for Audio & subtitles, Episodes and Sources."
+      ],
+      "implementation": "Uses the painter's existing vertical gradient plus one horizontal gradient image for the sheet. Bar parts are rounded rects; the bar shortens by resizing rects when a sheet opens. Sheet slide is translate 48 px plus opacity."
+    },
+    {
+      "file": "04-start-sources.html", "png": "04-start-sources.png", "before": "04-start-sources-before.png", "title": "Source picker",
+      "addresses": ["DP5", "DP6", "DP13", "DP14", "P10", "P11"],
+      "notes": [
+        "Drawn over the paused frame with an 88% ink dim instead of replacing the picture.",
+        "One 88 px line per source; the reason and file name show on the focused row only. Empty cells are blank.",
+        "Video and audio merge into Format; headers are sentence case in dim grey.",
+        "Quality badges are neutral; Best match is the only amber element; green stays on the health dots.",
+        "Same soft-fill row focus as the sheets. 04-start-sources-row3.png shows focus moved down."
+      ],
+      "implementation": "Rows are text and rounded rects. Focus expansion is a height change on one row and a translate on the rows below."
+    },
+    {
+      "file": "05-start.html", "png": "05-start.png", "before": "05-start-before.png", "title": "Start card",
+      "addresses": ["DP7", "DP8"],
+      "notes": [
+        "One status line (stage in white, detail in grey) over one 4 px white line the width of the logo, pulsing at its end.",
+        "Stepper dots and the red bar are gone; backdrop opacity up, left gradient deeper, slow 1.00 to 1.04 drift."
+      ],
+      "implementation": "Opacity pulse and a slow scale on one image; drop the drift if the painter cannot afford it."
+    }
+  ],
+  "open_questions": [
+    "Accent: amber #FFB23E (proposed), ember #FF7A45 or ice #7FD4FF? Any mock opens in the others with ?accent=ember or ?accent=ice.",
+    "Name and wordmark: 'direct' and the chevron mark are placeholders.",
+    "Pop-out card buttons (B1): keep OK = Play with colour keys for the rest, or make the four buttons reachable with Left/Right?",
+    "Focused Play: amber with a white ring (shown), or fill white like every other focused button?",
+    "Black logos such as Severance: light plate behind the logo, or the title in Display text?",
+    "Episodes on the title page: horizontal rail of stills (shown) or a vertical list with stills?",
+    "Player transport: labelled buttons for Audio & subtitles, Episodes and Sources (shown) or icons only?"
+  ]
+}

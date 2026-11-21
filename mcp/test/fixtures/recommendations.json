@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-18T08:00:00.123456+00:00",
+  "historyCoverage": {
+    "viewingLabels": 40,
+    "matchedLabels": 31,
+    "matchedTitles": 12,
+    "ratingsUsed": 3
+  },
+  "items": [
+    { "id": "tt5753856", "type": "series", "name": "Dark", "year": 2017, "genres": ["Crime", "Drama", "Mystery"], "score": 0.8123, "matchedGenres": ["Crime", "Mystery"] },
+    { "id": "tt11280740", "type": "series", "name": "Severance", "year": 2022, "genres": ["Drama", "Mystery", "Sci-Fi"], "score": 0.7911, "matchedGenres": ["Mystery", "Drama"] },
+    { "id": "tt15239678", "type": "movie", "name": "Dune: Part Two", "year": 2025, "genres": ["Action", "Adventure", "Drama"], "score": 0.7402, "matchedGenres": ["Drama"] },
+    { "id": "tt2442560", "type": "series", "name": "Peaky Blinders", "year": 2013, "genres": ["Crime", "Drama"], "score": 0.7011, "matchedGenres": ["Crime", "Drama"] },
+    { "id": "tt14452776", "type": "series", "name": "The Bear", "year": 2026, "genres": ["Comedy", "Drama"], "score": 0.6544, "matchedGenres": [] },
+    { "id": "tt4574334", "type": "series", "name": "Stranger Things", "year": 2016, "genres": ["Drama", "Fantasy", "Horror"], "score": 0.6011, "matchedGenres": ["Drama"] }
+  ],
+  "recentlyWatched": [
+    { "id": "tt0903747", "type": "series", "name": "Breaking Bad", "year": 2008, "genres": ["Crime", "Drama", "Thriller"], "lastWatchedAt": "2026-11-10" },
+    { "id": "tt1727587", "type": "movie", "name": "Sintel", "year": 2010, "genres": ["Animation", "Short"], "lastWatchedAt": "2026-10-01" }
+  ]
+}

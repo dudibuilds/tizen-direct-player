@@ -1,0 +1,793 @@
+{
+ "streams": [
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns 2010 PROPER Bluray 2160p AV1 HDR10 EN/ITA/FR/ES/DE OPUS 5.1-UH [UserHEVC]\n👤 297 💾 8.91 GB ⚙️ 1337x\n🇬🇧 / 🇮🇹 / 🇪🇸 / 🇫🇷 / 🇩🇪",
+   "infoHash": "038a2f7037d0ec3aebb7b8c25501d224dd83b314",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|av1|10bit|HDR",
+    "filename": "Paper Lanterns.2010.PROPER.Bluray.2160p.AV1.HDR10.OPUS.5.1-UH.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV",
+   "title": "Paper Lanterns 2010 UHD BluRay 2160p DTS-HD MA 5 1 DV HEVC HYBRID REMUX-FraMeSToR\n👤 48 💾 66.25 GB ⚙️ 1337x",
+   "infoHash": "15589238f38c90c5c715c35f204ffbf44a8ed49e",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay REMUX|hevc|DV",
+    "filename": "Paper Lanterns.2010.UHD.BluRay.2160p.DTS-HD.MA.5.1.DV.HEVC.HYBRID.REMUX-FraMeSToR.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR",
+   "title": "Paper Lanterns 2010 UHD BluRay 2160p HDR10 DV HEVC DTS-HD MA 5.1 x265-E\n👤 44 💾 25.23 GB ⚙️ 1337x",
+   "infoHash": "71e8d5550d4dbbb54bcea0dcee678a231900d890",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|hevc|10bit|DV|HDR",
+    "filename": "Paper Lanterns (2010).mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns.2010.MULTi.VFF.2160p.BluRay.HDR10.HE.AAC.5.1.x265-QTZ\n👤 40 💾 4.36 GB ⚙️ Torrent9\nMulti Audio / 🇫🇷",
+   "infoHash": "f9250469f86a16b0acb35f11b513c9cdc1f35664",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|x265|10bit|HDR",
+    "filename": "Paper Lanterns.2010.MULTi.VFF.2160p.BluRay.HDR10.HE.AAC.5.1.x265- QTZ.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR10+ | HDR",
+   "title": "Начало / Paper Lanterns [2010 UHD BDRemux 2160p HDR10 HDR10+ Dolby Vision] [Hybrid] Dub + 3x DVO + 2x AVO + VO + 2x Ukr + Original (Eng) + Sub (Rus Ukr Eng)\n👤 39 💾 77.38 GB ⚙️ Rutracker\n🇬🇧 / 🇷🇺 / 🇺🇦",
+   "infoHash": "2129357e41dbccd37148bb8ef0a237ae95d758c5",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay REMUX|10bit|DV|HDR10+|HDR",
+    "filename": "Начало.2010.UHD.Blu-Ray.Remux.2160p.[by arxivariys].mkv"
+   },
+   "sources": [
+    "tracker:http://bt3.t-ru.org/ann?magnet",
+    "dht:2129357e41dbccd37148bb8ef0a237ae95d758c5",
+    "tracker:udp://tracker.opentrackr.org:1337/announce",
+    "tracker:udp://open.stealth.si:80/announce",
+    "tracker:udp://tracker.torrent.eu.org:451/announce",
+    "tracker:udp://open.demonii.com:1337/announce",
+    "tracker:udp://open.tracker.cl:1337/announce",
+    "tracker:udp://exodus.desync.com:6969/announce",
+    "tracker:http://tracker.qu.ax:6969/announce",
+    "tracker:udp://tracker.ducks.party:1984/announce",
+    "tracker:udp://tracker.bittor.pw:1337/announce",
+    "tracker:udp://tracker.tryhackx.org:6969/announce",
+    "tracker:udp://tracker.corpscorp.online:80/announce",
+    "tracker:udp://tracker.nyaa.vc:6969/announce",
+    "tracker:udp://tracker-udp.gbitt.info:80/announce",
+    "tracker:udp://explodie.org:6969/announce",
+    "tracker:udp://tracker.gmi.gd:6969/announce",
+    "tracker:http://tracker.dler.org:6969/announce",
+    "tracker:udp://tracker2.dler.org:80/announce",
+    "tracker:http://tracker.dler.com:6969/announce",
+    "tracker:http://tracker.renfei.net:8080/announce",
+    "tracker:udp://tracker.peerfect.org:6969/announce",
+    "tracker:udp://opentor.net:6969",
+    "tracker:http://bt.t-ru.org/ann?magnet",
+    "tracker:http://bt2.t-ru.org/ann?magnet",
+    "tracker:http://bt4.t-ru.org/ann?magnet"
+   ]
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR",
+   "title": "Начало / Paper Lanterns (2010) UHD BDRemux 2160p | 4K | HDR | Dolby Vision Profile 8 | D P2 A | Лицензия\n👤 37 💾 86.15 GB ⚙️ Rutor\n🇬🇧 / 🇷🇺 / 🇺🇦",
+   "infoHash": "ac69f7f1ff98b1ea5137ff17af40c77326353a4a",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay REMUX|DV|HDR",
+    "filename": "Paper Lanterns.2010.2160p.UHD.BDRemux.DTS-HD.MA.5.1.HYBRID.DoVi.P8.by.DVT.mkv"
+   },
+   "sources": [
+    "tracker:udp://opentor.net:6969",
+    "tracker:udp://opentor.org:2710",
+    "tracker:http://retracker.local/announce",
+    "dht:ac69f7f1ff98b1ea5137ff17af40c77326353a4a",
+    "tracker:udp://tracker.opentrackr.org:1337/announce",
+    "tracker:udp://open.stealth.si:80/announce",
+    "tracker:udp://tracker.torrent.eu.org:451/announce",
+    "tracker:udp://open.demonii.com:1337/announce",
+    "tracker:udp://open.tracker.cl:1337/announce",
+    "tracker:udp://exodus.desync.com:6969/announce",
+    "tracker:http://tracker.qu.ax:6969/announce",
+    "tracker:udp://tracker.ducks.party:1984/announce",
+    "tracker:udp://tracker.bittor.pw:1337/announce",
+    "tracker:udp://tracker.tryhackx.org:6969/announce",
+    "tracker:udp://tracker.corpscorp.online:80/announce",
+    "tracker:udp://tracker.nyaa.vc:6969/announce",
+    "tracker:udp://tracker-udp.gbitt.info:80/announce",
+    "tracker:udp://explodie.org:6969/announce",
+    "tracker:udp://tracker.gmi.gd:6969/announce",
+    "tracker:http://tracker.dler.org:6969/announce",
+    "tracker:udp://tracker2.dler.org:80/announce",
+    "tracker:http://tracker.dler.com:6969/announce",
+    "tracker:http://tracker.renfei.net:8080/announce",
+    "tracker:udp://tracker.peerfect.org:6969/announce",
+    "tracker:http://bt.t-ru.org/ann?magnet",
+    "tracker:http://bt2.t-ru.org/ann?magnet",
+    "tracker:http://bt3.t-ru.org/ann?magnet",
+    "tracker:http://bt4.t-ru.org/ann?magnet"
+   ]
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns (2010) (2160p BluRay x265 HEVC 10bit HDR AAC 5.1 Tigole) [QxR]\n👤 36 💾 17.23 GB ⚙️ 1337x",
+   "infoHash": "74f42dedcfacacc132c097cbb45e0ff796bcc753",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|hevc|10bit|HDR",
+    "filename": "Paper Lanterns (2010) (2160p x265 10bit HDR Tigole).mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR",
+   "title": "Paper Lanterns (2010) 2160p UHD BluRay REMUX DV HDR 10bit HEVC [Hindi DDP 5.1 + English DTS-HD MA 5.1] x265 (FraMeSToR-4KHDHub)\n👤 27 💾 65.95 GB ⚙️ EXT\n🇬🇧 / 🇮🇳",
+   "infoHash": "d223b799918a15421627eef946e2061bc99460ab",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay REMUX|hevc|10bit|DV|HDR",
+    "filename": "Paper Lanterns (2010) 2160p UHD BluRay REMUX DV HDR 10bit HEVC [Hindi DDP 5.1 + English DTS-HD MA 5.1] x265 (FraMeSToR-4KHDHub).mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns (2010) AC3 5.1 ITA.ENG 2160p H265 HDR10 sub NUita.eng Sp33dy94 MIRCrew\n👤 26 💾 3.77 GB ⚙️ ilCorSaRoNeRo\n🇬🇧 / 🇮🇹",
+   "infoHash": "9e6168ca65345a8cd21c3d646f26491a31d78ac7",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|h265|10bit|HDR",
+    "filename": "Paper Lanterns (2010) AC3 5.1 ITA.ENG 2160p H265 HDR10 sub NUita.eng Sp33dy94-MIRCrew.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR",
+   "title": "Paper Lanterns.2010.2160p.MA.WEB-DL.DTS-HD.MA.5.1.DV.HDR.H.265-TheFarm\n👤 24 💾 29.35 GB ⚙️ ThePirateBay\n🇬🇧 / 🇯🇵 / 🇷🇺 / 🇵🇹 / 🇪🇸 / 🇰🇷 / 🇨🇳 / 🇫🇷 / 🇩🇪 / 🇳🇱 / 🇵🇱 / 🇨🇿 / 🇭🇺 / 🇧🇬 / 🇺🇦 / 🇩🇰 / 🇸🇪 / 🇳🇴 / 🇹🇷 / 🇸🇦 / 🇮🇩 / 🇲🇾 / 🇹🇭",
+   "infoHash": "c37549dff4b9c1853ee6accdbac559326b3fcc2f",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|WEB-DL|h265|DV|HDR",
+    "filename": "Paper Lanterns.2010.2160p.MA.WEB-DL.DTS-HD.MA.5.1.DV.HDR.H.265-TheFarm.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR",
+   "title": "Paper Lanterns.2010.4K.HDR.DV.2160p.BDRemux Ita Eng x265-NAHOM\n👤 19 💾 62.59 GB ⚙️ ilCorSaRoNeRo\n🇬🇧 / 🇮🇹",
+   "infoHash": "09d9972bfe97ca68944ad00d1a6c186f681b928e",
+   "fileIdx": 2,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay REMUX|x265|DV|HDR",
+    "filename": "Paper Lanterns.2010.4K.HDR.DV.2160p.BDRemux Ita Eng x265-NAHOM.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns.2010.2160p.UHD.BluRay.x265.10bit.HDR.DTS-HD.MA.5.1-TERMiNAL\n👤 16 💾 23.97 GB ⚙️ RARBG",
+   "infoHash": "81d798b414f4a638ae9c84993e66e3f97397abbb",
+   "fileIdx": 2,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|x265|10bit|HDR",
+    "filename": "paper lanterns.2010.2160p.uhd.bluray.x265-terminal.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns (2010) (2160p HDR BDRip x265 10bit DTS-HD MA 5.1 - r0b0t) [TAoE].mkv\n👤 15 💾 28.34 GB ⚙️ 1337x",
+   "infoHash": "3ddade949f5c4f728f78ef61902444e377d63f80",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BDRip|x265|10bit|HDR",
+    "filename": "Paper Lanterns (2010) (2160p HDR BDRip x265 10bit DTS-HD MA 5.1 - r0b0t) [TAoE].mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR",
+   "title": "Paper Lanterns.2010.2160p.BluRay.DV.HDR.ENG.LATINO.CASTELLANO.HINDI.ITA.GER.FRE.CHI.RUS.UKR.THAI.H265.MP4-BEN.THE.MEN\n👤 14 💾 69.66 GB ⚙️ TorrentGalaxy\n🇬🇧 / 🇷🇺 / 🇮🇹 / 🇪🇸 / 🇲🇽 / 🇨🇳 / 🇫🇷 / 🇩🇪 / 🇮🇳 / 🇺🇦 / 🇹🇭",
+   "infoHash": "b7c451eb488022a594c9e1b5e892ad6a2a9be8a5",
+   "fileIdx": 3,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|h265|DV|HDR",
+    "filename": "Paper Lanterns.2010.2160p.BluRay.DV.HDR.ENG.LATINO.CASTELLANO.HINDI.ITA.GER.FRE.CHI.RUS.UKR.THAI.H265.MP4-BEN.THE.MEN.mp4"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR",
+   "title": "Incepcja (2010) MULTi.2160p.UHD.BluRay.REMUX.DV.HDR.HEVC.DTS-HD.MA.5.1-MR\n👤 11 💾 66.6 GB ⚙️ EXT\nMulti Audio / 🇬🇧 / 🇵🇱",
+   "infoHash": "d2498c63d4c53fc036e33f157b5da41fca58a171",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay REMUX|hevc|DV|HDR",
+    "filename": "Incepcja (2010) MULTi.2160p.UHD.BluRay.REMUX.DV.HDR.HEVC.DTS-HD.MA.5.1-MR..mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns 2010 ITA ENG UHDrip HDR HEVC 2160p mkv\n👤 10 💾 21.21 GB ⚙️ TorrentGalaxy\n🇬🇧 / 🇮🇹",
+   "infoHash": "ff72dfe16efc875324b56ac7f37737214979e53c",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|UHDRip|hevc|HDR",
+    "filename": "Paper Lanterns.2010.ITA.ENG.UHDrip.HDR.HEVC.2160p.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns.2010.4K.HDR.2160p.BDRip Ita Eng x265-NAHOM\n👤 10 💾 20.9 GB ⚙️ 1337x\n🇬🇧 / 🇮🇹",
+   "infoHash": "e4ab8001a0a43e7f57dbcb1ef1527ff1e28809f5",
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BDRip|x265|HDR"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns (2010) 2160p UHD HDR Bluray AV1 Opus Multi7 [dAV1nci]\n👤 9 💾 9.21 GB ⚙️ 1337x",
+   "infoHash": "5a6928eeaa3bd4948105d6073a6b6a6db09955c7",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|av1|HDR",
+    "filename": "Paper Lanterns.2010.2160p.UHD.HDR.Bluray.AV1.Opus.Multi7-dAV1nci.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns 2010 Bluray 2160p AV1 HDR10 EN/FR/DE/ITA/ES AC3 5.1-UH\n👤 8 💾 8.48 GB ⚙️ ThePirateBay\n🇬🇧 / 🇮🇹 / 🇫🇷 / 🇩🇪",
+   "infoHash": "784f1ef5e3ef1bb0adb3dcb554df29f9e4681469",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|av1|10bit|HDR",
+    "filename": "Paper Lanterns.2010.Bluray.2160p.AV1.HDR10.AC3.5.1-UH.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns.2010.MULTI.VF2.2160p.UHD.BLURAY.REMUX.HDR10.DTS.HD.MA.5.1.HEVC-GLaDOS\n👤 6 💾 68.27 GB ⚙️ Torrent9\nMulti Audio / 🇫🇷",
+   "infoHash": "bd56e3844264d107aacb8b4d0ed1bd14d10b4ec5",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay REMUX|hevc|10bit|HDR",
+    "filename": "Paper Lanterns.2010.MULTi.VF2.2160p.UHD.BluRay.REMUX.HDR10.HEVC.DTS-HD.MA.5.1-GLaDOS.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV",
+   "title": "Paper Lanterns.2010.UHD.BluRay.2160p.DTS-HD.MA.5.1.DV.HEVC.HYBRID.REMUX-FraMeSToR\n👤 6 💾 66.25 GB ⚙️ TorrentGalaxy",
+   "infoHash": "ae5a3138ee927813ea1d6db4ceb4414f20fd1a84",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay REMUX|hevc|DV",
+    "filename": "Paper Lanterns.2010.UHD.BluRay.2160p.DTS-HD.MA.5.1.DV.HEVC.HYBRID.REMUX-FraMeSToR.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns (2010) 2160p H265 BluRay Rip 10 bit HDR ita eng AC3 5.1 sub ita eng Licdom\n👤 6 💾 6.97 GB ⚙️ 1337x\n🇬🇧 / 🇮🇹",
+   "infoHash": "d8f8562afa192df4937b487a3757d9431c207665",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BRRip|h265|10bit|HDR",
+    "filename": "Paper Lanterns (2010) 2160p H265 10 bit ita eng AC3 5.1 sub ita eng Licdom.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Начало / Paper Lanterns (2010) BDRip 2160p от VoX | 4K | HDR | D P A L1\n👤 6 💾 37.79 GB ⚙️ Rutor\n🇬🇧 / 🇷🇺 / 🇺🇦",
+   "infoHash": "18c588c65f2dd08bdf4ca11bd63634500b77e08e",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BDRip|x265|HDR",
+    "filename": "Paper Lanterns.2010.2160p.UHD.BDRip.HDR.x265.DD+5.1-VoX.mkv"
+   },
+   "sources": [
+    "tracker:http://retracker.local/announce",
+    "tracker:udp://opentor.org:2710",
+    "dht:18c588c65f2dd08bdf4ca11bd63634500b77e08e",
+    "tracker:udp://tracker.opentrackr.org:1337/announce",
+    "tracker:udp://open.stealth.si:80/announce",
+    "tracker:udp://tracker.torrent.eu.org:451/announce",
+    "tracker:udp://open.demonii.com:1337/announce",
+    "tracker:udp://open.tracker.cl:1337/announce",
+    "tracker:udp://exodus.desync.com:6969/announce",
+    "tracker:http://tracker.qu.ax:6969/announce",
+    "tracker:udp://tracker.ducks.party:1984/announce",
+    "tracker:udp://tracker.bittor.pw:1337/announce",
+    "tracker:udp://tracker.tryhackx.org:6969/announce",
+    "tracker:udp://tracker.corpscorp.online:80/announce",
+    "tracker:udp://tracker.nyaa.vc:6969/announce",
+    "tracker:udp://tracker-udp.gbitt.info:80/announce",
+    "tracker:udp://explodie.org:6969/announce",
+    "tracker:udp://tracker.gmi.gd:6969/announce",
+    "tracker:http://tracker.dler.org:6969/announce",
+    "tracker:udp://tracker2.dler.org:80/announce",
+    "tracker:http://tracker.dler.com:6969/announce",
+    "tracker:http://tracker.renfei.net:8080/announce",
+    "tracker:udp://tracker.peerfect.org:6969/announce",
+    "tracker:udp://opentor.net:6969",
+    "tracker:http://bt.t-ru.org/ann?magnet",
+    "tracker:http://bt2.t-ru.org/ann?magnet",
+    "tracker:http://bt3.t-ru.org/ann?magnet",
+    "tracker:http://bt4.t-ru.org/ann?magnet"
+   ]
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR",
+   "title": "Paper Lanterns.2010.2160p.MAX.WEB-DL.DDP5.1.DV.HDR.H.265-TURG\n👤 5 💾 22.19 GB ⚙️ 1337x",
+   "infoHash": "9cc6ea7df752000a6c12f0598c44374d5ef84bba",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|WEB-DL|h265|DV|HDR",
+    "filename": "Paper Lanterns.2010.2160p.MAX.WEB-DL.DDP5.1.DV.HDR.H.265-TURG.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR",
+   "title": "Paper Lanterns.2010.Eng.Fre.Ger.Ita.Por.Spa.Cze.Hun.Pol.Rus.Tha.Tur.Chi.Jpn.2160p.BluRay.Hybrid.Remux.DV.HDR.HEVC.DTS-HD.MA-SGF\n👤 4 💾 79.69 GB ⚙️ EXT\n🇬🇧 / 🇯🇵 / 🇷🇺 / 🇮🇹 / 🇵🇹 / 🇪🇸 / 🇨🇳 / 🇫🇷 / 🇩🇪 / 🇵🇱 / 🇨🇿 / 🇭🇺 / 🇹🇷",
+   "infoHash": "5dc7dc17de382f35e8351dad5092d5a885764ecc",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay REMUX|hevc|DV|HDR",
+    "filename": "Paper Lanterns.2010.Eng.Fre.Ger.Ita.Por.Spa.Cze.Hun.Pol.Rus.Tha.Tur.Chi.Jpn.2160p.BluRay.Hybrid.Remux.DV.HDR.HEVC.DTS-HD.MA-SGF.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR10+",
+   "title": "Paper Lanterns 2010 SPECIAL HYBRID 2160p REMUX DV HDR10+ DTS-HD MA 5.1-jennaortegaUHD\n👤 4 💾 67.88 GB ⚙️ TorrentGalaxy",
+   "infoHash": "869432b07cfcf7c683d0138cbfbc58a6b50921ff",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|hevc|10bit|DV|HDR10+",
+    "filename": "Paper Lanterns.2010.INTERNAL.SPECIAL.2160p.REMUX.HEVC.DV.HDR10+.DTS-HD.MA.5.1-jennaortegaUHD.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns.2010.2160p.UHD.BluRay.x265.10bit.HDR.DTS-HD.MA.5.1-RARBG\n👤 4 💾 12.65 GB ⚙️ RARBG",
+   "infoHash": "b119627d719372cbe091f22bee97090bc8b1b3c4",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|x265|10bit|HDR",
+    "filename": "Paper Lanterns.2010.2160p.UHD.BluRay.x265.10bit.HDR.DTS-HD.MA.5.1-RARBG.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns.2010.2160p.UHD.BluRay.10bit.HDR.x265-HazMatt.mkv\n👤 4 💾 3.92 GB ⚙️ 1337x",
+   "infoHash": "5cae6b2ed637c72bd7d98f5dfc16c0e34c915301",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|x265|10bit|HDR",
+    "filename": "Paper Lanterns.2010.2160p.UHD.BluRay.10bit.HDR.x265-HazMatt.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR",
+   "title": "Paper Lanterns.2010.2160p.4K.BDRemux.HEVC.HDR10.Dolby.Vision-NAHOM\n👤 3 💾 62.59 GB ⚙️ EXT",
+   "infoHash": "8cae196c9e422523490f280c13e92f7b60339051",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay REMUX|hevc|10bit|DV|HDR",
+    "filename": "Paper Lanterns.2010.2160p.4K.BDRemux.HEVC.HDR10.Dolby.Vision-NAHOM.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR",
+   "title": "Počátek / Paper Lanterns (2010)(CZ/EN)[2160p][HDR/DV][HEVC]\n👤 3 💾 6.39 GB ⚙️ EXT\n🇬🇧 / 🇨🇿",
+   "infoHash": "3d75e203bde067d7a81d34de3c030f599b414753",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|hevc|DV|HDR",
+    "filename": "Počátek (2010) UHDRDV cz en.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR",
+   "title": "Paper Lanterns.2010.Eng.Fre.Ger.Ita.Por.Spa.Cze.Hun.Pol.Rus.Tha.Tur.Chi.Jpn.2160p.BluRay.Hybrid.Remux.DV.HDR.HEVC.DTS-HD.MA-SGF\n👤 3 💾 79.69 GB ⚙️ TorrentGalaxy\n🇬🇧 / 🇯🇵 / 🇷🇺 / 🇮🇹 / 🇵🇹 / 🇪🇸 / 🇨🇳 / 🇫🇷 / 🇩🇪 / 🇵🇱 / 🇨🇿 / 🇭🇺 / 🇹🇷",
+   "infoHash": "abec1ba0acebb9d1f832a3d666106a380aac0f90",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay REMUX|hevc|DV|HDR",
+    "filename": "Paper Lanterns.2010.Eng.Fre.Ger.Ita.Por.Spa.Cze.Hun.Pol.Rus.Tha.Tur.Chi.Jpn.2160p.BluRay.Hybrid.Remux.DV.HDR.HEVC.DTS-HD.MA-SGF.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns.2010.2160p.UHD.BluRay.x265.10bit.HDR.DDP5.1-RARBG\n👤 3 💾 8.96 GB ⚙️ RARBG",
+   "infoHash": "150f722288b4395ab107ee0f31f8c0b247269f2c",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|x265|10bit|HDR",
+    "filename": "Paper Lanterns.2010.2160p.UHD.BluRay.x265.10bit.HDR.DDP5.1-RARBG.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns (2010) (2160p BluRay DTS-HD M.A 5.1 10bit HDR x265 d4)\n👤 3 💾 20.46 GB ⚙️ TorrentGalaxy",
+   "infoHash": "13b21a74d210c1a6b8c850e7b33e3f622cd93dc9",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|x265|10bit|HDR",
+    "filename": "Paper Lanterns (2010) (2160p BluRay DTS-HD M.A 5.1 10bit HDR x265 d4).mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Origen [4K UHDrip][2160p][HDR][AC3 5.1 Castellano AC3 5.1-Ingles+Subs][ES-EN]\n👤 3 💾 27.21 GB ⚙️ Wolfmax4k\n🇬🇧 / 🇪🇸",
+   "infoHash": "aec14bb3b74f88daa4fa104900718aa38b81cdd6",
+   "fileIdx": 4,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|UHDRip|HDR",
+    "filename": "Origen 4Krip2160.www.descargas2020.com.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Origen [4K UHDmicro][2160p][HDR][AC3 5.1 Castellano-AC3 5.1-Ingles+Subs][ES-EN]\n👤 3 💾 15.84 GB ⚙️ Wolfmax4k\n🇬🇧 / 🇪🇸",
+   "infoHash": "b9c2f11efa9d8128c43ac04e38ba40614284914a",
+   "fileIdx": 2,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|HDR",
+    "filename": "Origen 4Kmicro2160.www.descargas2020.org.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR10+",
+   "title": "Paper Lanterns.2010.2160p.DV.HDR10Plus.Ai-Enhanced.HEVC.DTS-HD.MA.5.1.MULTI-RIFE.4.18-60fps-DirtyHippie\n👤 2 💾 49.25 GB ⚙️ TorrentGalaxy\nMulti Audio / 🇬🇧",
+   "infoHash": "d01eae707976f7753bcd357c403280badd8a26ef",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|hevc|DV|HDR10+",
+    "filename": "Paper Lanterns.2010.2160p.DV.HDR10Plus.Ai-Enhanced.HEVC.DTS-HD.MA.5.1.MULTI-RIFE.4.18-60fps-DirtyHippie.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns.2010.2160p.HDR10.BDRip.DDP5.1.x265.BluBit\n👤 1 💾 3.11 GB ⚙️ 1337x",
+   "infoHash": "509170c4b14b688d62143be4223c41600c5422e2",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BDRip|x265|10bit|HDR",
+    "filename": "Paper Lanterns (2010).mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns.2010.MULTi.REMUX.2160p.UHD.Blu-ray.HDR.HEVC.DTS-HD.MA5.1-DENDA\n👤 1 💾 65.97 GB ⚙️ BestTorrents\nMulti Audio / 🇬🇧 / 🇵🇱",
+   "infoHash": "5daf464649ab016e2983b8297c514095f34dbc00",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay REMUX|hevc|HDR",
+    "filename": "Paper Lanterns.2010.MULTi.REMUX.2160p.UHD.Blu-ray.HDR.HEVC.DTS-HD.MA5.1-DENDA.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns (2010) x 1600 (2160p) HDR 5.1 x265 10bit Phun Psyz\n👤 1 💾 4.06 GB ⚙️ 1337x",
+   "infoHash": "97f5289149d30be76a27fcad39f2689e131c0dac",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|x265|10bit|HDR",
+    "filename": "Paper Lanterns (2010) x 1600 (2160p) HDR 5.1 x265 10bit Phun Psyz.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Origen [4K Remux][2160p][HDR][AC3 5.1 Castellano DTS-MA 5.1-Ingles+Subs][ES-EN]\n👤 1 💾 65.92 GB ⚙️ MejorTorrent\n🇬🇧 / 🇪🇸",
+   "infoHash": "4cd1e6b318faeb78f1c6c36b7826b3c9833f329f",
+   "fileIdx": 4,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|HDR",
+    "filename": "Origen 4K2160.www.newpct1.com.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR10+ | HDR",
+   "title": "Начало / Paper Lanterns [2010 UHD BDRemux 2160p HDR10 HDR10+ Dolby Vision] [Hybrid] Dub + 3x DVO + 2x AVO + VO + 2x Ukr + Original (Eng) + Sub (Rus Ukr Eng)\n👤 0 💾 77.38 GB ⚙️ Rutracker\n🇬🇧 / 🇷🇺 / 🇺🇦",
+   "infoHash": "dc1e8a81a376ca0b4ed9be379e33af29c89b57fd",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay REMUX|10bit|DV|HDR10+|HDR",
+    "filename": "Начало.2010.UHD.Blu-Ray.Remux.2160p.[by arxivariys].mkv"
+   },
+   "sources": [
+    "tracker:http://bt3.t-ru.org/ann?magnet",
+    "dht:dc1e8a81a376ca0b4ed9be379e33af29c89b57fd",
+    "tracker:udp://tracker.opentrackr.org:1337/announce",
+    "tracker:udp://open.stealth.si:80/announce",
+    "tracker:udp://tracker.torrent.eu.org:451/announce",
+    "tracker:udp://open.demonii.com:1337/announce",
+    "tracker:udp://open.tracker.cl:1337/announce",
+    "tracker:udp://exodus.desync.com:6969/announce",
+    "tracker:http://tracker.qu.ax:6969/announce",
+    "tracker:udp://tracker.ducks.party:1984/announce",
+    "tracker:udp://tracker.bittor.pw:1337/announce",
+    "tracker:udp://tracker.tryhackx.org:6969/announce",
+    "tracker:udp://tracker.corpscorp.online:80/announce",
+    "tracker:udp://tracker.nyaa.vc:6969/announce",
+    "tracker:udp://tracker-udp.gbitt.info:80/announce",
+    "tracker:udp://explodie.org:6969/announce",
+    "tracker:udp://tracker.gmi.gd:6969/announce",
+    "tracker:http://tracker.dler.org:6969/announce",
+    "tracker:udp://tracker2.dler.org:80/announce",
+    "tracker:http://tracker.dler.com:6969/announce",
+    "tracker:http://tracker.renfei.net:8080/announce",
+    "tracker:udp://tracker.peerfect.org:6969/announce",
+    "tracker:udp://opentor.net:6969",
+    "tracker:http://bt.t-ru.org/ann?magnet",
+    "tracker:http://bt2.t-ru.org/ann?magnet",
+    "tracker:http://bt4.t-ru.org/ann?magnet"
+   ]
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns (2010) (2160p HDR BDRip x265 10bit EAC3 5.1 - r0b0t) [TAoE].mkv\n👤 0 💾 24.84 GB ⚙️ 1337x",
+   "infoHash": "6cb8f947975304c6611fd74225134f15be08cd04",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BDRip|x265|10bit|HDR",
+    "filename": "Paper Lanterns (2010) (2160p HDR BDRip x265 10bit EAC3 5.1 - r0b0t) [TAoE].mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k HDR",
+   "title": "Paper Lanterns.2010.2160p.UHD.HDR.BluRay.(x265 10bit DD5.1).[SGJ5-LorD]\n👤 0 💾 6.1 GB ⚙️ 1337x",
+   "infoHash": "e69747db3c36eb150dcb4c3f750e0d36d3b40f25",
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|x265|10bit|HDR"
+   }
+  },
+  {
+   "name": "Torrentio\n4k",
+   "title": "Paper Lanterns 2010 2160p BluRay\n👤 100 💾 6.64 GB ⚙️ YTS",
+   "infoHash": "3e7f10c96f4fdfe29f2b99c956a81169df730bbc",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|x265|10bit",
+    "filename": "Paper Lanterns.2010.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k",
+   "title": "Paper Lanterns.2010.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.5.1-FGT\n👤 75 💾 79.57 GB ⚙️ RARBG",
+   "infoHash": "54014d9dbc5e1780f5fc86fc7ccf2b2564569f1e",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay REMUX|hevc",
+    "filename": "Paper Lanterns.2010.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.5.1-FGT.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k",
+   "title": "Paper Lanterns.2010.2160p.BluRay.HEVC.DTS-HD.MA.5.1-COASTER\n👤 60 💾 86.12 GB ⚙️ RARBG",
+   "infoHash": "dd11ce6eab2499022d3389f523f8dc7e9cf4bbe4",
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|hevc"
+   }
+  },
+  {
+   "name": "Torrentio\n4k",
+   "title": "Paper Lanterns.2010.PROPER.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.5.1-FGT\n👤 35 💾 79.56 GB ⚙️ RARBG",
+   "infoHash": "deda093bfd9b9b3bfa4f837d4ba5d86d2ff6f343",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay REMUX|hevc",
+    "filename": "Paper Lanterns.2010.PROPER.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.5.1-FGT.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k",
+   "title": "Paper Lanterns.2010.2160p.BluRay.x265.10bit.SDR.DTS-HD.MA.5.1-SWTYBLZ\n👤 11 💾 47.26 GB ⚙️ RARBG",
+   "infoHash": "4f56f1c83aa4833c8d7e99a768eae432ba5983fb",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|x265|10bit",
+    "filename": "Paper Lanterns.2010.2160p.BluRay.x265.10bit.SDR.DTS-HD.MA.5.1-SWTYBLZ.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k",
+   "title": "Начало / Paper Lanterns [2010 UHD Blu-ray disc 2160p] Dub + Sub Rus Eng + Original Eng\n👤 5 💾 86.12 GB ⚙️ Rutracker\n🇬🇧 / 🇯🇵 / 🇷🇺 / 🇮🇹 / 🇵🇹 / 🇪🇸 / 🇨🇳 / 🇫🇷 / 🇩🇪 / 🇹🇷",
+   "infoHash": "66a7c4108acc2c542d728d992a115bb77991076a",
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay"
+   },
+   "sources": [
+    "tracker:http://bt4.t-ru.org/ann?magnet",
+    "dht:66a7c4108acc2c542d728d992a115bb77991076a",
+    "tracker:udp://tracker.opentrackr.org:1337/announce",
+    "tracker:udp://open.stealth.si:80/announce",
+    "tracker:udp://tracker.torrent.eu.org:451/announce",
+    "tracker:udp://open.demonii.com:1337/announce",
+    "tracker:udp://open.tracker.cl:1337/announce",
+    "tracker:udp://exodus.desync.com:6969/announce",
+    "tracker:http://tracker.qu.ax:6969/announce",
+    "tracker:udp://tracker.ducks.party:1984/announce",
+    "tracker:udp://tracker.bittor.pw:1337/announce",
+    "tracker:udp://tracker.tryhackx.org:6969/announce",
+    "tracker:udp://tracker.corpscorp.online:80/announce",
+    "tracker:udp://tracker.nyaa.vc:6969/announce",
+    "tracker:udp://tracker-udp.gbitt.info:80/announce",
+    "tracker:udp://explodie.org:6969/announce",
+    "tracker:udp://tracker.gmi.gd:6969/announce",
+    "tracker:http://tracker.dler.org:6969/announce",
+    "tracker:udp://tracker2.dler.org:80/announce",
+    "tracker:http://tracker.dler.com:6969/announce",
+    "tracker:http://tracker.renfei.net:8080/announce",
+    "tracker:udp://tracker.peerfect.org:6969/announce",
+    "tracker:udp://opentor.net:6969",
+    "tracker:http://bt.t-ru.org/ann?magnet",
+    "tracker:http://bt2.t-ru.org/ann?magnet",
+    "tracker:http://bt3.t-ru.org/ann?magnet"
+   ]
+  },
+  {
+   "name": "Torrentio\n4k",
+   "title": "Paper Lanterns (2010) [SDR] 2160p BluRay HEVC [Hin-Eng] DDP 5.1 — PeruGuy\n👤 4 💾 27.87 GB ⚙️ 1337x\n🇬🇧 / 🇮🇳",
+   "infoHash": "8dd6d7a063cf3a0a283ffd84dfa9de801cb78151",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|hevc",
+    "filename": "Paper Lanterns (2010) [SDR] 2160p BluRay HEVC [Hin-Eng] DDP 5.1 — PeruGuy.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k",
+   "title": "A Origem 4k 2160p Dual Audio WWW.BLUDV.TV\n👤 4 💾 24.62 GB ⚙️ Comando\nDual Audio / 🇬🇧 / 🇵🇹",
+   "infoHash": "143aff6ac3dd0dd1c14a51683da10cb74bdd1140",
+   "fileIdx": 1,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k",
+    "filename": "A Origem 2010 4k 2160p Dual Audio Encoder by Carlos José WWW.BLUDV.TV.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k",
+   "title": "Paper Lanterns.2010.Multi.2160p.UHD.Bluray.x265.DTS-HDMA.5.1.[En+Hi]-\n👤 4 💾 24.43 GB ⚙️ ThePirateBay\nMulti Audio / 🇬🇧",
+   "infoHash": "63127111d4db6eee5d73bfe225e10b3ee84b7e14",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|x265",
+    "filename": "Paper Lanterns.2010.Multi.2160p.UHD.Bluray.x265.DTS-HDMA.5.1.[En+Hi]-DTOne.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k",
+   "title": "Paper Lanterns (2010) (2160p Bluray x265 HEVC 10bit AAC 5.1 Joy) [UTR]\n👤 4 💾 6.7 GB ⚙️ 1337x",
+   "infoHash": "f8edcc2caf9b6917f34c3be66faa10e3febb0f06",
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|hevc|10bit"
+   }
+  },
+  {
+   "name": "Torrentio\n4k",
+   "title": "Paper Lanterns.2010.2160p.BluRay.x264.8bit.SDR.DTS-HD.MA.5.1-SWTYBLZ\n👤 3 💾 52.69 GB ⚙️ RARBG",
+   "infoHash": "c60a78749536d9dea4407e2a65cb418ddf0a12c3",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BluRay|x264|8bit",
+    "filename": "Paper Lanterns.2010.2160p.BluRay.x264.8bit.SDR.DTS-HD.MA.5.1-SWTYBLZ.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n4k",
+   "title": "Начало / Paper Lanterns (2010) UHD BDRip 2160p | 4K | SDR | D P2\n👤 2 💾 48.88 GB ⚙️ Rutor\n🇬🇧 / 🇷🇺",
+   "infoHash": "10bdf6abfbd4d78a9a0cdb857ac73f5ac3384af4",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|BDRip|hevc",
+    "filename": "Nachalo.2010.BDRip.(2160p).4K.HEVC.SDR.Agentx.mkv"
+   },
+   "sources": [
+    "tracker:udp://opentor.net:6969",
+    "tracker:http://retracker.local/announce",
+    "dht:10bdf6abfbd4d78a9a0cdb857ac73f5ac3384af4",
+    "tracker:udp://tracker.opentrackr.org:1337/announce",
+    "tracker:udp://open.stealth.si:80/announce",
+    "tracker:udp://tracker.torrent.eu.org:451/announce",
+    "tracker:udp://open.demonii.com:1337/announce",
+    "tracker:udp://open.tracker.cl:1337/announce",
+    "tracker:udp://exodus.desync.com:6969/announce",
+    "tracker:http://tracker.qu.ax:6969/announce",
+    "tracker:udp://tracker.ducks.party:1984/announce",
+    "tracker:udp://tracker.bittor.pw:1337/announce",
+    "tracker:udp://tracker.tryhackx.org:6969/announce",
+    "tracker:udp://tracker.corpscorp.online:80/announce",
+    "tracker:udp://tracker.nyaa.vc:6969/announce",
+    "tracker:udp://tracker-udp.gbitt.info:80/announce",
+    "tracker:udp://explodie.org:6969/announce",
+    "tracker:udp://tracker.gmi.gd:6969/announce",
+    "tracker:http://tracker.dler.org:6969/announce",
+    "tracker:udp://tracker2.dler.org:80/announce",
+    "tracker:http://tracker.dler.com:6969/announce",
+    "tracker:http://tracker.renfei.net:8080/announce",
+    "tracker:udp://tracker.peerfect.org:6969/announce",
+    "tracker:http://bt.t-ru.org/ann?magnet",
+    "tracker:http://bt2.t-ru.org/ann?magnet",
+    "tracker:http://bt3.t-ru.org/ann?magnet",
+    "tracker:http://bt4.t-ru.org/ann?magnet"
+   ]
+  },
+  {
+   "name": "Torrentio\n4k",
+   "title": "Paper Lanterns.2010.4K.UHD.BRay.x264.DTS.6Ch-BakiG\n👤 0 💾 20.8 GB ⚙️ 1337x",
+   "infoHash": "1b71aefc19d0951b8ef22cf03ccc1c15de27cfb3",
+   "behaviorHints": {
+    "bingeGroup": "torrentio|4k|x264"
+   }
+  },
+  {
+   "name": "Torrentio\n1080p DV | HDR",
+   "title": "Начало / Paper Lanterns [2010 UHD BDRip 1080p HDR10 Dolby Vision] [Hybrid] Dub + 2x DVO + 2x AVO + 2x Ukr + Original (Eng) + Sub (Rus Ukr Eng)\n👤 181 💾 24.25 GB ⚙️ Rutracker\n🇬🇧 / 🇷🇺 / 🇺🇦",
+   "infoHash": "c75fb3a08c4f35b840f500358cfcb6377bbb2990",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|1080p|BDRip|10bit|DV|HDR",
+    "filename": "Начало.2010.UHD.BDRip.1080p.mkv"
+   },
+   "sources": [
+    "tracker:http://bt.t-ru.org/ann?magnet",
+    "dht:c75fb3a08c4f35b840f500358cfcb6377bbb2990",
+    "tracker:udp://tracker.opentrackr.org:1337/announce",
+    "tracker:udp://open.stealth.si:80/announce",
+    "tracker:udp://tracker.torrent.eu.org:451/announce",
+    "tracker:udp://open.demonii.com:1337/announce",
+    "tracker:udp://open.tracker.cl:1337/announce",
+    "tracker:udp://exodus.desync.com:6969/announce",
+    "tracker:http://tracker.qu.ax:6969/announce",
+    "tracker:udp://tracker.ducks.party:1984/announce",
+    "tracker:udp://tracker.bittor.pw:1337/announce",
+    "tracker:udp://tracker.tryhackx.org:6969/announce",
+    "tracker:udp://tracker.corpscorp.online:80/announce",
+    "tracker:udp://tracker.nyaa.vc:6969/announce",
+    "tracker:udp://tracker-udp.gbitt.info:80/announce",
+    "tracker:udp://explodie.org:6969/announce",
+    "tracker:udp://tracker.gmi.gd:6969/announce",
+    "tracker:http://tracker.dler.org:6969/announce",
+    "tracker:udp://tracker2.dler.org:80/announce",
+    "tracker:http://tracker.dler.com:6969/announce",
+    "tracker:http://tracker.renfei.net:8080/announce",
+    "tracker:udp://tracker.peerfect.org:6969/announce",
+    "tracker:udp://opentor.net:6969",
+    "tracker:http://bt2.t-ru.org/ann?magnet",
+    "tracker:http://bt3.t-ru.org/ann?magnet",
+    "tracker:http://bt4.t-ru.org/ann?magnet"
+   ]
+  },
+  {
+   "name": "Torrentio\n1080p HDR",
+   "title": "Paper Lanterns (2010) (1080p BluRay x265 HEVC 10bit HDR AAC 5.1 afm72) [QxR]\n👤 53 💾 5.7 GB ⚙️ 1337x",
+   "infoHash": "05d288579c07ab30dd3db96aa63b70e58ea7cfde",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|1080p|BluRay|hevc|10bit|HDR",
+    "filename": "Paper Lanterns (2010) (1080p BluRay x265 HDR afm72).mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n1080p DV | HDR",
+   "title": "Paper Lanterns 2010 Hybrid 1080p UHD BluRay DD 5 1 DV HDR x265-HiDt\n👤 8 💾 15.88 GB ⚙️ ThePirateBay",
+   "infoHash": "e5023702a9a1ac5ce82cece4abd10a2e8e33ba52",
+   "fileIdx": 1,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|1080p|BluRay|x265|DV|HDR",
+    "filename": "Paper Lanterns 2010 Hybrid 1080p UHD BluRay DD 5 1 DV HDR x265-HiDt.mkv"
+   }
+  },
+  {
+   "name": "Torrentio\n1080p HDR",
+   "title": "[HQ].Paper Lanterns.2010.1080p.DS4K.HDR10.(Hindi-English).DTS5.1.H.265-PeruGuy\n👤 4 💾 9.13 GB ⚙️ 1337x\n🇬🇧 / 🇮🇳",
+   "infoHash": "d054c5143188d6b27ddaf9157901e37ed410461a",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|1080p|h265|10bit|HDR",
+    "filename": "[HQ].Paper Lanterns.2010.1080p.DS4K.HDR10.(Hindi-English).DTS5.1.H.265-PeruGuy.mkv"
+   }
+  }
+ ]
+}

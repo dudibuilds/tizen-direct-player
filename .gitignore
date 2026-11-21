@@ -1,0 +1,12 @@
+**/bin/
+**/obj/
+artifacts/
+local-data/
+**/__pycache__/
+node_modules/
+*.tpk
+*.wgt
+*.p12
+.env
+.claude/worktrees/
+docs/design/assets

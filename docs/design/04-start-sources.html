@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>04 Source picker</title>
+<link rel="stylesheet" href="mock.css">
+<style>
+  /* State A (PNG): focus on the best match (row 1). State B: focus moved to row 3; the detail line travels with focus. */
+  .hdr { top: 236px; font-size: 26px; line-height: 32px; font-weight: 500; color: var(--dim); }
+  .src { left: 96px; width: 1728px; height: 88px; border-radius: 12px; transition: transform var(--t-scroll) var(--move), background-color 150ms linear, height var(--t-focus) var(--move); }
+  .src > * { position: absolute; top: 22px; line-height: 44px; white-space: nowrap; }
+  .src .q { left: 24px; top: 22px; width: 116px; }
+  .src .size { left: 204px; font-size: 34px; font-weight: 600; }
+  .src .health { left: 374px; display: flex; align-items: center; gap: 8px; font-size: 34px; }
+  .src .health .dot { margin-right: 2px; } .src .health .n { margin-left: 8px; }
+  .src .fmt { left: 624px; font-size: 34px; }
+  .src .lang { left: 944px; display: flex; gap: 10px; }
+  .src .addon { right: 24px; font-size: 28px; color: var(--meta); font-weight: 500; }
+  .src .more { left: 24px; top: 84px; opacity: 0; transition: opacity 100ms var(--fade-out); display: flex; align-items: center; gap: 16px; }
+  .src .file { left: 24px; top: 132px; opacity: 0; transition: opacity 100ms var(--fade-out); }
+  .foc { background: var(--focus-row); height: 190px; }
+  .foc .size { font-weight: 700; }
+  .foc .more, .foc .file { opacity: 1; transition: opacity 160ms var(--fade-in) 80ms; }
+  .sepline { left: 120px; width: 1680px; height: 1px; background: rgba(255,255,255,.07); }
+  /* state wiring */
+  .a #r1, .stage:not(.a) #r3 { background: var(--focus-row); height: 146px; }
+  .a #r1 .size, .stage:not(.a) #r3 .size { font-weight: 700; }
+  .a #r1 .more, .a #r1 .file, .stage:not(.a) #r3 .more, .stage:not(.a) #r3 .file { opacity: 1; transition: opacity 160ms var(--fade-in) 80ms; }
+  .a .after1, .stage:not(.a) .after3 { transform: translateY(58px); }
+  .src .best { left: 1300px; top: 22px; }
+  .n3 { display: none; } .stage:not(.a) .n3 { display: inline; } .stage:not(.a) .n1 { display: none; }
+</style></head>
+<body>
+<div class="stage a" data-hold-a="4600" data-hold-b="3000">
+  <!-- the paused frame stays underneath: one dim layer, not a new page -->
+  <img class="cover" src="assets/bb-s2e3.jpg" alt="">
+  <div style="left:0;top:0;width:100%;height:100%;background:rgba(11,14,20,.88)"></div>
+
+  <div class="t-title" style="left:96px;top:54px">Sources</div>
+  <div class="t-meta" style="left:96px;top:124px">Breaking Bad<span class="sep"></span>S2:E3<span class="sep"></span>Bit by a Dead Bee</div>
+  <div style="right:96px;top:62px;display:flex;gap:16px">
+    <div class="chip">Sort<span style="color:var(--meta)">Best match</span></div>
+    <div class="chip">Quality<span style="color:var(--meta)">Any</span></div>
+    <div class="chip">Show unplayable<span style="color:var(--meta)">21</span></div>
+  </div>
+
+  <div class="hdr" style="left:120px">Quality</div><div class="hdr" style="left:300px">Size</div><div class="hdr" style="left:470px">Health</div>
+  <div class="hdr" style="left:720px">Format</div><div class="hdr" style="left:1040px">Audio</div><div class="hdr" style="right:120px"><span class="n1">1</span><span class="n3">3</span> of 210</div>
+
+  <div class="src layer" id="r1" style="top:280px">
+    <span class="badge q">720p</span><span class="size">2.7 GB</span>
+    <span class="health"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="n">89</span></span>
+    <span class="fmt">BluRay</span><span class="lang"><span class="badge outline">EN</span><span class="badge outline">RU</span></span><span class="addon">Torrentio</span>
+    <span class="badge accent best">Best match</span>
+    <span class="file t-meta" style="top:88px"><span class="white">Multi audio, healthy swarm</span><span class="sep"></span>Breaking.Bad.S02E03.720p.BluRay.Goblin.Eng.AMC.mkv</span>
+  </div>
+  <div class="src layer after1" id="r2" style="top:368px">
+    <span class="badge q">720p</span><span class="size">2.7 GB</span>
+    <span class="health"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="n">55</span></span>
+    <span class="fmt">BluRay</span><span class="lang"><span class="badge outline">EN</span><span class="badge outline">RU</span></span><span class="addon">Torrentio</span>
+  </div>
+  <div class="src layer after1" id="r3" style="top:456px">
+    <span class="badge q">1080p</span><span class="size">2.0 GB</span>
+    <span class="health"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="n">508</span></span>
+    <span class="fmt">BluRay · HEVC · AAC 5.1</span><span class="addon">Torrentio</span>
+    <span class="file t-meta" style="top:88px">Breaking Bad (2008) - S02E03 - Bit by a Dead Bee (1080p BluRay x265 Silence).mkv</span>
+  </div>
+  <div class="src layer after1 after3" style="top:544px">
+    <span class="badge q">1080p</span><span class="size">540 MB</span>
+    <span class="health"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="n">486</span></span>
+    <span class="fmt">BluRay</span><span class="addon">Torrentio</span>
+  </div>
+  <div class="src layer after1 after3" style="top:632px">
+    <span class="badge q">1080p</span><span class="size">1.0 GB</span>
+    <span class="health"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="n">186</span></span>
+    <span class="fmt">BluRay · HEVC</span><span class="addon">Torrentio</span>
+  </div>
+  <div class="src layer after1 after3" style="top:720px">
+    <span class="badge q">1080p</span><span class="size">750 MB</span>
+    <span class="health"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="n">110</span></span>
+    <span class="fmt">BluRay · HEVC</span><span class="addon">Torrentio</span>
+  </div>
+  <div class="src layer after1 after3" style="top:808px">
+    <span class="badge q">1080p</span><span class="size">639 MB</span>
+    <span class="health"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="n">76</span></span>
+    <span class="fmt">BluRay · HEVC</span><span class="addon">Torrentio</span>
+  </div>
+  <div class="src layer after1 after3" style="top:896px">
+    <span class="badge q">720p</span><span class="size">376 MB</span>
+    <span class="health"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="n">279</span></span>
+    <span class="fmt">BluRay</span><span class="addon">Torrentio</span>
+  </div>
+  <!-- bottom fade: more rows below -->
+  <div style="left:0;top:900px;width:100%;height:180px;background:linear-gradient(180deg,rgba(11,14,20,0),rgba(11,14,20,.96) 85%)"></div>
+</div>
+<script src="mock.js"></script>
+</body></html>

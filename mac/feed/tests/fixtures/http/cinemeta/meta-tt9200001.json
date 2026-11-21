@@ -1,0 +1,29 @@
+{
+ "meta": {
+  "id": "tt9200001",
+  "imdb_id": "tt9200001",
+  "type": "movie",
+  "name": "The Last Signal",
+  "releaseInfo": "2024",
+  "released": "2024-04-12T00:00:00.000Z",
+  "imdbRating": "7.7",
+  "genres": [
+   "Sci-Fi",
+   "Thriller"
+  ],
+  "genre": [
+   "Sci-Fi",
+   "Thriller"
+  ],
+  "country": "United States",
+  "director": [
+   "Mara Quinn"
+  ],
+  "writer": [],
+  "cast": [
+   "Ana Holt",
+   "Ben Cross"
+  ],
+  "poster": "https://images.metahub.space/poster/small/tt9200001/img"
+ }
+}

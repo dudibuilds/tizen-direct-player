@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>01 Home</title>
+<link rel="stylesheet" href="mock.css">
+<style>
+  .menu { left: 96px; top: 56px; display: flex; align-items: center; gap: 44px; height: 48px; }
+  .menu .item { font-size: 30px; font-weight: 500; color: var(--meta); line-height: 48px; position: relative; }
+  .menu .item.cur { color: #fff; font-weight: 700; }
+  .menu .item.cur::after { content: ''; position: absolute; left: 0; bottom: -12px; width: 28px; height: 4px; border-radius: 2px; background: var(--accent); }
+  .menu .wordmark { margin-right: 28px; }
+
+  .rowtitle { left: 96px; transition: opacity 200ms linear; }
+  .tile { width: 464px; height: 261px; }
+  .tile.side { transition: transform var(--t-pop) var(--move), opacity 200ms linear; }
+  /* state A: the focused card has popped. It grows from its left edge; right neighbours slide over; nothing in the row is covered. */
+  .a .tile.dimmed { opacity: .45; }
+  .a .tile.pushed { transform: translateX(208px); }
+  .a .below { opacity: .38; }
+  .a .below-title { opacity: 0; }
+  .below { transition: opacity 200ms linear; }
+
+  .pop { left: 580px; top: 513px; width: 488px; height: 275px; border-radius: 16px; overflow: hidden; background: var(--raised);
+    box-shadow: 0 0 0 4px var(--focus), var(--shadow); z-index: 5;
+    transition: left var(--t-pop) var(--move), top var(--t-pop) var(--move), width var(--t-pop) var(--move), height var(--t-pop) var(--move); }
+  .a .pop { left: 592px; top: 506px; width: 672px; height: 526px; }
+  .pop .still { left: 0; top: 0; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; }
+  .pop .panel { left: 0; right: 0; top: 378px; height: 148px; border-top: 1px solid rgba(255,255,255,.08); opacity: 0; transition: opacity 100ms var(--fade-out); }
+  .a .pop .panel { opacity: 1; transition: opacity 160ms var(--fade-in) 80ms; }
+  .pop .mute { right: 18px; top: 18px; width: 52px; height: 52px; border-radius: 50%; background: rgba(0,0,0,.45); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 160ms linear; }
+  .a .pop .mute { opacity: 1; transition-delay: 80ms; }
+  .pop .logo { left: 24px; bottom: 20px; width: 300px; height: 80px; }
+  .acts { left: 24px; top: 18px; display: flex; gap: 16px; align-items: center; }
+  .ready { left: 24px; top: 98px; display: flex; align-items: center; gap: 12px; white-space: nowrap; }
+</style></head>
+<body>
+<div class="stage a" data-hold-a="5600" data-hold-b="2400">
+  <!-- backdrop of the focused title, held until focus rests 300 ms, then cross-faded 500 ms -->
+  <div class="layer" style="left:420px;top:0;width:1500px;height:844px"><img class="cover" src="assets/interstellar-bg.jpg" alt=""></div>
+  <div style="left:420px;top:0;width:760px;height:844px;background:linear-gradient(90deg,#0B0E14 0%,rgba(11,14,20,.82) 30%,rgba(11,14,20,0) 100%)"></div>
+  <div style="left:0;top:250px;width:1920px;height:600px;background:linear-gradient(180deg,rgba(11,14,20,0) 0%,rgba(11,14,20,.75) 32%,#0B0E14 46%)"></div>
+  <div class="scrim-top"></div>
+
+  <!-- menu with wordmark and current-section marker -->
+  <div class="menu">
+    <div class="wordmark"><svg><use href="#i-mark"/></svg>direct</div>
+    <div class="item cur">Home</div><div class="item">Search</div><div class="item">Browse</div><div class="item">Queue</div><div class="item">Add-ons</div><div class="item">Settings</div><div class="item">Account</div>
+  </div>
+
+  <!-- compact hero for the focused title -->
+  <div class="layer" data-area="46000" style="left:96px;top:140px;width:420px;height:120px"><img src="assets/interstellar-logo.png" alt="Interstellar"></div>
+  <div class="t-meta nowrap" style="left:96px;top:276px">Movie<span class="sep"></span>2014<span class="sep"></span>2h 49m<span class="sep"></span><span class="white">★ 8.7</span><span class="sep"></span>Adventure, Sci-Fi</div>
+  <div class="t-body shadowed" style="left:96px;top:322px;width:900px">In a dystopian future where Earth has become near-uninhabitable, a team of astronauts embark on a mission…</div>
+
+  <!-- focused row -->
+  <div class="rowtitle t-head" style="top:446px">For you</div>
+  <div class="card tile side dimmed" style="left:-400px;top:520px"><img class="cover" src="assets/bear-bg.jpg" alt=""><div class="scrim"></div></div>
+  <div class="card tile side dimmed" style="left:96px;top:520px"><img class="cover" src="assets/dark-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="14000"><img src="assets/dark-logo.png" alt="Dark"></div></div>
+  <div class="card tile side dimmed pushed" style="left:1088px;top:520px"><img class="cover" src="assets/aot-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="14000"><img src="assets/aot-logo.png" alt="Attack on Titan"></div></div>
+  <div class="card tile side dimmed pushed" style="left:1584px;top:520px"><img class="cover" src="assets/inception-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="14000"><img src="assets/inception-logo.png" alt="Inception"></div></div>
+
+  <!-- next row: title fades out and art dims while a card is popped, so no text is ever sliced -->
+  <div class="rowtitle t-head below-title" style="top:822px">Start something new</div>
+  <div class="card tile below" style="left:96px;top:892px"><img class="cover" src="assets/bear-bg.jpg" alt=""></div>
+  <div class="card tile below" style="left:592px;top:892px"><img class="cover" src="assets/dark-bg.jpg" alt=""></div>
+  <div class="card tile below" style="left:1088px;top:892px"><img class="cover" src="assets/aot-bg.jpg" alt=""></div>
+  <div class="card tile below" style="left:1584px;top:892px"><img class="cover" src="assets/got-bg.jpg" alt=""></div>
+
+  <!-- pop-out trailer card -->
+  <div class="pop layer">
+    <div class="still layer"><img class="cover" src="assets/interstellar-bg.jpg" alt=""><div style="left:0;right:0;bottom:0;height:55%;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.6))"></div>
+      <div class="logo" data-area="19000"><img src="assets/interstellar-logo.png" alt=""></div>
+      <div class="mute"><svg class="i" style="width:30px;height:30px"><use href="#i-vol"/></svg></div>
+    </div>
+    <div class="panel layer">
+      <div class="acts">
+        <div class="btn primary sm"><svg class="i" style="width:30px;height:30px"><use href="#i-play"/></svg>Play</div>
+        <div class="ibtn sm"><svg class="i"><use href="#i-plus"/></svg></div>
+        <div class="ibtn sm"><svg class="i" style="width:30px;height:30px"><use href="#i-thumb"/></svg></div>
+      </div>
+      <div class="ibtn sm" style="right:24px;top:18px"><svg class="i"><use href="#i-down"/></svg></div>
+      <div class="ready t-meta"><span class="dot"></span><span class="white">Ready to play</span><span class="badge" style="margin-left:10px">HD</span><span class="badge outline">Spanish subs</span></div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+</body></html>

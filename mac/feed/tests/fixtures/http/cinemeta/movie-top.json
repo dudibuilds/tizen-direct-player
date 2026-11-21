@@ -1,0 +1,281 @@
+{
+ "metas": [
+  {
+   "id": "tt9300001",
+   "imdb_id": "tt9300001",
+   "type": "movie",
+   "name": "Signal Lost",
+   "releaseInfo": "2026",
+   "released": "2026-10-20T00:00:00.000Z",
+   "imdbRating": "7.4",
+   "genres": [
+    "Sci-Fi",
+    "Thriller"
+   ],
+   "genre": [
+    "Sci-Fi",
+    "Thriller"
+   ],
+   "country": "United States",
+   "director": [
+    "Mara Quinn"
+   ],
+   "writer": [],
+   "cast": [
+    "Ana Holt",
+    "Kai Dorn"
+   ],
+   "poster": "https://images.metahub.space/poster/small/tt9300001/img"
+  },
+  {
+   "id": "tt9300002",
+   "imdb_id": "tt9300002",
+   "type": "movie",
+   "name": "Crown of Paper",
+   "releaseInfo": "2026",
+   "released": "2026-09-01T00:00:00.000Z",
+   "imdbRating": "7.1",
+   "genres": [
+    "Crime",
+    "Drama"
+   ],
+   "genre": [
+    "Crime",
+    "Drama"
+   ],
+   "country": "United Kingdom",
+   "director": [
+    "Leo Hart"
+   ],
+   "writer": [],
+   "cast": [
+    "Rosa Vale"
+   ],
+   "poster": "https://images.metahub.space/poster/small/tt9300002/img"
+  },
+  {
+   "id": "tt9300003",
+   "imdb_id": "tt9300003",
+   "type": "movie",
+   "name": "Sunny Days 2",
+   "releaseInfo": "2026",
+   "released": "2026-06-01T00:00:00.000Z",
+   "imdbRating": "6.6",
+   "genres": [
+    "Comedy",
+    "Romance"
+   ],
+   "genre": [
+    "Comedy",
+    "Romance"
+   ],
+   "country": "United States",
+   "director": [
+    "Kim Bright"
+   ],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300003/img"
+  },
+  {
+   "id": "tt9300004",
+   "imdb_id": "tt9300004",
+   "type": "movie",
+   "name": "Deep Orbit",
+   "releaseInfo": "2026",
+   "released": "2026-11-01T00:00:00.000Z",
+   "imdbRating": "6.9",
+   "genres": [
+    "Sci-Fi",
+    "Adventure"
+   ],
+   "genre": [
+    "Sci-Fi",
+    "Adventure"
+   ],
+   "country": "United States",
+   "director": [
+    "Ula Venn"
+   ],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300004/img"
+  },
+  {
+   "id": "tt9300005",
+   "imdb_id": "tt9300005",
+   "type": "movie",
+   "name": "Quiet Fields",
+   "releaseInfo": "2026",
+   "released": "2026-08-15T00:00:00.000Z",
+   "imdbRating": "7.0",
+   "genres": [
+    "Drama"
+   ],
+   "genre": [
+    "Drama"
+   ],
+   "country": "France",
+   "director": [
+    "Anne Roux"
+   ],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300005/img"
+  },
+  {
+   "id": "tt9300006",
+   "imdb_id": "tt9300006",
+   "type": "movie",
+   "name": "Low Tide Rising",
+   "releaseInfo": "2026",
+   "released": "2026-07-01T00:00:00.000Z",
+   "imdbRating": "4.9",
+   "genres": [
+    "Action"
+   ],
+   "genre": [
+    "Action"
+   ],
+   "country": "United States",
+   "director": [],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300006/img"
+  },
+  {
+   "id": "tt9300009",
+   "imdb_id": "tt9300009",
+   "type": "movie",
+   "name": "Midnight Ledger",
+   "releaseInfo": "2025",
+   "released": "2025-03-14T00:00:00.000Z",
+   "imdbRating": "7.8",
+   "genres": [
+    "Crime",
+    "Thriller"
+   ],
+   "genre": [
+    "Crime",
+    "Thriller"
+   ],
+   "country": "United States",
+   "director": [
+    "Leo Hart"
+   ],
+   "writer": [],
+   "cast": [
+    "Dee Park"
+   ],
+   "poster": "https://images.metahub.space/poster/small/tt9300009/img"
+  },
+  {
+   "id": "tt9300010",
+   "imdb_id": "tt9300010",
+   "type": "movie",
+   "name": "Comedy Hour",
+   "releaseInfo": "2026",
+   "released": "2026-05-01T00:00:00.000Z",
+   "imdbRating": "6.5",
+   "genres": [
+    "Comedy"
+   ],
+   "genre": [
+    "Comedy"
+   ],
+   "country": "United States",
+   "director": [],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300010/img"
+  },
+  {
+   "id": "tt9300016",
+   "imdb_id": "tt9300016",
+   "type": "movie",
+   "name": "Iron Tide 2",
+   "releaseInfo": "2026",
+   "released": "2026-10-01T00:00:00.000Z",
+   "imdbRating": "6.8",
+   "genres": [
+    "Action"
+   ],
+   "genre": [
+    "Action"
+   ],
+   "country": "United States",
+   "director": [
+    "Rex Stone"
+   ],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300016/img"
+  },
+  {
+   "id": "tt9300017",
+   "imdb_id": "tt9300017",
+   "type": "movie",
+   "name": "Unrated Newcomer",
+   "releaseInfo": "2026",
+   "released": "2026-11-12T00:00:00.000Z",
+   "imdbRating": "",
+   "genres": [
+    "Drama"
+   ],
+   "genre": [
+    "Drama"
+   ],
+   "country": "United States",
+   "director": [],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300017/img"
+  },
+  {
+   "id": "tt9300019",
+   "imdb_id": "tt9300019",
+   "type": "movie",
+   "name": "Future Film",
+   "releaseInfo": "2027",
+   "released": "2027-03-01T00:00:00.000Z",
+   "imdbRating": "",
+   "genres": [
+    "Sci-Fi"
+   ],
+   "genre": [
+    "Sci-Fi"
+   ],
+   "country": "United States",
+   "director": [],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300019/img"
+  },
+  {
+   "id": "tt9300023",
+   "imdb_id": "tt9300023",
+   "type": "movie",
+   "name": "Harbor of Lies",
+   "releaseInfo": "2026",
+   "released": "2026-07-20T00:00:00.000Z",
+   "imdbRating": "7.2",
+   "genres": [
+    "Crime",
+    "Mystery",
+    "Thriller"
+   ],
+   "genre": [
+    "Crime",
+    "Mystery",
+    "Thriller"
+   ],
+   "country": "United States",
+   "director": [],
+   "writer": [
+    "Ava Stone"
+   ],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300023/img"
+  }
+ ]
+}

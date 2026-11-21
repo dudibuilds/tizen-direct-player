@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Mac dev host: runs the shared core agent API (core/Api) over in-memory fakes so MCP works without the TV. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>Ru7100.Host</RootNamespace>
+    <AssemblyName>ru7100-host</AssemblyName>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <Import Project="../core/Core.props" />
+  <ItemGroup>
+    <!-- The fakes live beside the API tests so both use the same doubles. -->
+    <Compile Include="../tests/Api/Fakes/**/*.cs" LinkBase="Fakes" />
+  </ItemGroup>
+</Project>

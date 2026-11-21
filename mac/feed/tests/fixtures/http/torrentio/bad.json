@@ -1,0 +1,58 @@
+{
+ "streams": [
+  {
+   "name": "Torrentio\n1080p",
+   "title": "Deep.Orbit.2026.1080p.WEB.AV1.Opus-GRP\n👤 300 💾 1.2 GB ⚙️ 1337x",
+   "infoHash": "5b897ad0b4516d503773af5079142f03a9ecf888",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|x"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV",
+   "title": "Deep.Orbit.2026.2160p.WEB-DL.DV.H.265-GRP\n👤 120 💾 5.1 GB ⚙️ 1337x",
+   "infoHash": "b31b89f67c7482fbd12059d8993749ad7698e338",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|x"
+   }
+  },
+  {
+   "name": "Torrentio\n1080p",
+   "title": "Deep.Orbit.2026.1080p.BluRay.DTS-HD.MA.5.1.x264-GRP\n👤 90 💾 4.0 GB ⚙️ 1337x",
+   "infoHash": "07769d29a83054a2d000692ca39b4953c4f85931",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|x"
+   }
+  },
+  {
+   "name": "Torrentio\n1080p",
+   "title": "Deep.Orbit.2026.1080p.BluRay.TrueHD.7.1.x264-GRP\n👤 60 💾 6.0 GB ⚙️ 1337x",
+   "infoHash": "f8b8fb6d3ffb97283fe71cb91b9ca7a4907defd6",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|x"
+   }
+  },
+  {
+   "name": "Torrentio\n1080p",
+   "title": "Deep.Orbit.2026.1080p.BluRay.REMUX.AAC.x264-GRP\n👤 50 💾 22.4 GB ⚙️ 1337x",
+   "infoHash": "3df8d606c57a8bf4de151a04878269134b47c7c8",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|x"
+   }
+  },
+  {
+   "name": "Torrentio\n1080p",
+   "title": "Deep.Orbit.2026.HDCAM.x264-GRP\n👤 400 💾 1.4 GB ⚙️ 1337x",
+   "infoHash": "41405fb1a978ab66090e82f2460daffc259117a7",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|x"
+   }
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "streams": [
+  {
+   "name": "Torrentio\n1080p",
+   "title": "Some.Title.2026.1080p.WEB-DL.DDP5.1.H.264-GRP\n👤 210 💾 2.4 GB ⚙️ 1337x",
+   "infoHash": "083ac267086b80332d651622514d715eef9b19b7",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|x"
+   }
+  },
+  {
+   "name": "Torrentio\n4k DV | HDR",
+   "title": "Some.Title.2026.2160p.WEB-DL.DV.HDR.H.265-GRP\n👤 80 💾 14.2 GB ⚙️ 1337x",
+   "infoHash": "a562fb6a29e2377b99d59499627aa3d3e8059cd0",
+   "fileIdx": 0,
+   "behaviorHints": {
+    "bingeGroup": "torrentio|x"
+   }
+  }
+ ]
+}

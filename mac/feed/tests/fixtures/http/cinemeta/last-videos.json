@@ -1,0 +1,182 @@
+{
+ "metasDetailed": [
+  {
+   "id": "tt9100001",
+   "imdb_id": "tt9100001",
+   "type": "series",
+   "name": "Night Harbor",
+   "releaseInfo": "2023–",
+   "released": "2023-03-01T00:00:00.000Z",
+   "imdbRating": "8.1",
+   "genres": [
+    "Crime",
+    "Drama",
+    "Mystery"
+   ],
+   "genre": [
+    "Crime",
+    "Drama",
+    "Mystery"
+   ],
+   "country": "United Kingdom",
+   "director": [],
+   "writer": [
+    "Ava Stone"
+   ],
+   "cast": [
+    "Tom Reed",
+    "Lia Moss"
+   ],
+   "poster": "https://images.metahub.space/poster/small/tt9100001/img",
+   "videos": [
+    {
+     "id": "tt9100001:2:1",
+     "season": 2,
+     "episode": 1,
+     "number": 1,
+     "name": "Episode 1",
+     "released": "2024-11-11T12:00:00.000Z"
+    },
+    {
+     "id": "tt9100001:2:2",
+     "season": 2,
+     "episode": 2,
+     "number": 2,
+     "name": "Episode 2",
+     "released": "2024-11-12T12:00:00.000Z"
+    },
+    {
+     "id": "tt9100001:2:3",
+     "season": 2,
+     "episode": 3,
+     "number": 3,
+     "name": "Episode 3",
+     "released": "2024-11-13T12:00:00.000Z"
+    },
+    {
+     "id": "tt9100001:2:4",
+     "season": 2,
+     "episode": 4,
+     "number": 4,
+     "name": "Episode 4",
+     "released": "2024-11-14T12:00:00.000Z"
+    },
+    {
+     "id": "tt9100001:2:5",
+     "season": 2,
+     "episode": 5,
+     "number": 5,
+     "name": "Episode 5",
+     "released": "2024-11-15T12:00:00.000Z"
+    },
+    {
+     "id": "tt9100001:2:6",
+     "season": 2,
+     "episode": 6,
+     "number": 6,
+     "name": "Episode 6",
+     "released": "2024-11-16T12:00:00.000Z"
+    },
+    {
+     "id": "tt9100001:3:1",
+     "season": 3,
+     "episode": 1,
+     "number": 1,
+     "name": "Episode 1",
+     "released": "2026-11-10T12:00:00.000Z"
+    },
+    {
+     "id": "tt9100001:3:2",
+     "season": 3,
+     "episode": 2,
+     "number": 2,
+     "name": "Episode 2",
+     "released": "2026-11-17T12:00:00.000Z"
+    },
+    {
+     "id": "tt9100001:3:3",
+     "season": 3,
+     "episode": 3,
+     "number": 3,
+     "name": "Episode 3",
+     "released": "2026-11-24T12:00:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "tt9100002",
+   "imdb_id": "tt9100002",
+   "type": "series",
+   "name": "Glass Valley",
+   "releaseInfo": "2025–",
+   "released": "2025-09-15T00:00:00.000Z",
+   "imdbRating": "7.9",
+   "genres": [
+    "Drama",
+    "Sci-Fi"
+   ],
+   "genre": [
+    "Drama",
+    "Sci-Fi"
+   ],
+   "country": "United States",
+   "director": [],
+   "writer": [],
+   "cast": [
+    "Mia Lane",
+    "Owen Hale"
+   ],
+   "poster": "https://images.metahub.space/poster/small/tt9100002/img",
+   "videos": [
+    {
+     "id": "tt9100002:2:1",
+     "season": 2,
+     "episode": 1,
+     "number": 1,
+     "name": "Episode 1",
+     "released": "2026-10-04T12:00:00.000Z"
+    },
+    {
+     "id": "tt9100002:2:2",
+     "season": 2,
+     "episode": 2,
+     "number": 2,
+     "name": "Episode 2",
+     "released": "2026-10-07T12:00:00.000Z"
+    },
+    {
+     "id": "tt9100002:2:3",
+     "season": 2,
+     "episode": 3,
+     "number": 3,
+     "name": "Episode 3",
+     "released": "2026-10-10T12:00:00.000Z"
+    },
+    {
+     "id": "tt9100002:2:4",
+     "season": 2,
+     "episode": 4,
+     "number": 4,
+     "name": "Episode 4",
+     "released": "2026-10-13T12:00:00.000Z"
+    },
+    {
+     "id": "tt9100002:2:5",
+     "season": 2,
+     "episode": 5,
+     "number": 5,
+     "name": "Episode 5",
+     "released": "2026-11-14T12:00:00.000Z"
+    },
+    {
+     "id": "tt9100002:2:6",
+     "season": 2,
+     "episode": 6,
+     "number": 6,
+     "name": "Episode 6",
+     "released": "2026-11-21T12:00:00.000Z"
+    }
+   ]
+  }
+ ]
+}

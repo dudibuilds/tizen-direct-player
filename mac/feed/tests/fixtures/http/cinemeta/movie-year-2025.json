@@ -1,0 +1,78 @@
+{
+ "metas": [
+  {
+   "id": "tt9300009",
+   "imdb_id": "tt9300009",
+   "type": "movie",
+   "name": "Midnight Ledger",
+   "releaseInfo": "2025",
+   "released": "2025-03-14T00:00:00.000Z",
+   "imdbRating": "7.8",
+   "genres": [
+    "Crime",
+    "Thriller"
+   ],
+   "genre": [
+    "Crime",
+    "Thriller"
+   ],
+   "country": "United States",
+   "director": [
+    "Leo Hart"
+   ],
+   "writer": [],
+   "cast": [
+    "Dee Park"
+   ],
+   "poster": "https://images.metahub.space/poster/small/tt9300009/img"
+  },
+  {
+   "id": "tt9300011",
+   "imdb_id": "tt9300011",
+   "type": "movie",
+   "name": "Dark Water Bay",
+   "releaseInfo": "2025",
+   "released": "2025-10-01T00:00:00.000Z",
+   "imdbRating": "7.3",
+   "genres": [
+    "Crime",
+    "Drama",
+    "Mystery"
+   ],
+   "genre": [
+    "Crime",
+    "Drama",
+    "Mystery"
+   ],
+   "country": "United Kingdom",
+   "director": [],
+   "writer": [],
+   "cast": [
+    "Tom Reed"
+   ],
+   "poster": "https://images.metahub.space/poster/small/tt9300011/img"
+  },
+  {
+   "id": "tt9300015",
+   "imdb_id": "tt9300015",
+   "type": "movie",
+   "name": "Red Ledger",
+   "releaseInfo": "2025",
+   "released": "2025-12-01T00:00:00.000Z",
+   "imdbRating": "7.0",
+   "genres": [
+    "Crime",
+    "Drama"
+   ],
+   "genre": [
+    "Crime",
+    "Drama"
+   ],
+   "country": "United States",
+   "director": [],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300015/img"
+  }
+ ]
+}

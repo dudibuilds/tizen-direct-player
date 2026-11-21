@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>12 Service See all</title>
+<link rel="stylesheet" href="mock.css">
+<style>
+  /* "See all" at the end of a service row opens today's Browse grid with one new filter, Service, preset to the
+     service (and the row's type or genre). All other Browse filters still apply, including "Watchable with".
+     The heading names the service instead of "Browse". Layout follows UiLayoutBrowse: title at the safe top,
+     filter pills under it, five posters per row from y 304, the focused title's panel under its poster.
+     You are still inside the service, so the page keeps its tint (Apple TV: steel blue). ?tint=off shows plain ink. */
+  .stage { --ink: 14,22,34; --tint: 60,90,122; background: rgb(var(--ink)); }
+  html.notint .stage { --ink: 11,14,20; --tint: 11,14,20; }
+  .glow { left: -360px; top: -520px; width: 1500px; height: 1000px;
+    background: radial-gradient(closest-side, rgba(var(--tint),.66), rgba(var(--tint),.26) 55%, rgba(var(--tint),0)); }
+  .pills { left: 96px; top: 140px; display: flex; gap: 16px; }
+  .pills .chip { position: static; }
+  .poster { width: 288px; height: 432px; }
+  .info { left: 444px; top: 764px; width: 528px; height: 236px; border-radius: 16px; background: var(--raised); box-shadow: var(--shadow); }
+  .info > * { position: absolute; left: 28px; }
+</style></head>
+<body>
+<script>if (new URLSearchParams(location.search).get('tint') === 'off') document.documentElement.classList.add('notint');</script>
+<div class="stage" data-loop="off">
+  <!-- grid: row 1 (focused row: captions give way to the info panel) -->
+  <div class="card poster" style="left:96px;top:304px"><img class="cover" src="assets/slowhorses-poster.jpg" alt=""></div>
+  <div class="card poster focus" style="left:456px;top:304px"><img class="cover" src="assets/severance-poster.jpg" alt=""></div>
+  <div class="card poster" style="left:816px;top:304px"><img class="cover" src="assets/tedlasso-poster.jpg" alt=""></div>
+  <div class="card poster" style="left:1176px;top:304px"><img class="cover" src="assets/silo-poster.jpg" alt=""></div>
+  <div class="card poster" style="left:1536px;top:304px"><img class="cover" src="assets/pluribus-poster.jpg" alt=""></div>
+  <!-- row 2 -->
+  <div class="card poster" style="left:96px;top:868px"><img class="cover" src="assets/widowsbay-poster.jpg" alt=""></div>
+  <div class="card poster" style="left:456px;top:868px"><img class="cover" src="assets/darkmatter-poster.jpg" alt=""></div>
+  <div class="card poster" style="left:816px;top:868px"><img class="cover" src="assets/foundation-poster.jpg" alt=""></div>
+  <div class="card poster" style="left:1176px;top:868px"><img class="cover" src="assets/shrinking-poster.jpg" alt=""></div>
+  <div class="card poster" style="left:1536px;top:868px"><img class="cover" src="assets/morningshow-poster.jpg" alt=""></div>
+  <div style="left:0;top:980px;width:1920px;height:100px;background:linear-gradient(180deg,rgba(var(--ink),0),rgb(var(--ink)))"></div>
+
+  <!-- focused title's panel (the same panel Browse and Search show) -->
+  <div class="info layer">
+    <div class="t-head nowrap" style="top:22px">Severance</div>
+    <div class="t-meta nowrap" style="top:76px">Series<span class="sep"></span>2022–<span class="sep"></span>2 seasons<span class="sep"></span><span class="white">★ 8.7</span></div>
+    <div class="t-meta nowrap" style="top:118px">Drama, Mystery, Sci-Fi</div>
+    <div class="t-meta nowrap" style="top:172px;display:flex;align-items:center;gap:12px"><span class="dot"></span><span class="white">Ready to play</span><span class="badge" style="margin-left:10px">4K</span><span class="badge outline">Spanish subs</span></div>
+  </div>
+
+  <!-- header band, title, count, filter pills -->
+  <div style="left:0;top:0;width:1920px;height:276px;background:linear-gradient(180deg,rgb(var(--ink)) 0%,rgb(var(--ink)) 78%,rgba(var(--ink),0) 100%)"></div>
+  <div class="glow"></div>
+  <div class="t-title nowrap" style="left:96px;top:56px">Apple TV</div>
+  <div class="t-meta nowrap" style="right:96px;top:69px;color:var(--dim)">Title 2 of 228</div>
+  <div class="pills">
+    <div class="chip sel">Series</div><div class="chip sel">Apple TV</div><div class="chip">Any genre</div><div class="chip">Any year</div>
+    <div class="chip">Any rating</div><div class="chip">Any length</div><div class="chip">Any language</div><div class="chip">Any quality</div>
+  </div>
+</div>
+<script src="mock.js"></script>
+</body></html>

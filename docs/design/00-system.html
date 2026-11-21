@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>00 Design system</title>
+<link rel="stylesheet" href="mock.css">
+<style>
+  html, body { height: auto; overflow: auto; background: var(--ink); }
+  body { width: 1920px; color: #fff; font-family: var(--font); -webkit-font-smoothing: antialiased; font-variant-numeric: tabular-nums; transform-origin: 0 0; }
+  main { padding: 72px 96px 120px; }
+  section { margin-top: 88px; }
+  h1 { font-size: 72px; line-height: 84px; margin: 28px 0 12px; letter-spacing: -.01em; }
+  h2 { font-size: 40px; line-height: 52px; margin: 0 0 8px; }
+  h2 + .note { margin-bottom: 32px; }
+  /* annotations are for reading this sheet on a laptop; every TV component below is drawn at its real 1080p size */
+  .note { font-size: 26px; line-height: 38px; color: var(--meta); max-width: 1500px; }
+  .note b { color: #fff; font-weight: 600; }
+  .grid { display: grid; gap: 24px; }
+  .sw { border-radius: 14px; overflow: hidden; background: var(--panel); border: 1px solid rgba(255,255,255,.08); }
+  .sw .c { height: 120px; }
+  .sw .d { padding: 16px 20px 20px; }
+  .sw .n { font-size: 28px; font-weight: 700; line-height: 36px; }
+  .sw .h { font-size: 26px; color: var(--meta); line-height: 34px; font-family: Menlo, monospace; }
+  .sw .u { font-size: 26px; line-height: 34px; color: var(--meta); margin-top: 6px; }
+  .demo { background: #0E1219; border: 1px solid rgba(255,255,255,.08); border-radius: 14px; padding: 36px; position: relative; }
+  .demo .cap { font-size: 26px; line-height: 34px; color: var(--meta); margin-top: 22px; }
+  .demo .cap b { color: #fff; font-weight: 600; }
+  .hrow { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .ramp > div { display: grid; grid-template-columns: 330px 1fr; align-items: baseline; padding: 14px 0; border-top: 1px solid rgba(255,255,255,.08); }
+  .ramp .k { font-size: 26px; color: var(--meta); line-height: 34px; }
+  .shape { width: 200px; height: 112px; background: var(--raised); border: 1.5px solid rgba(255,255,255,.3); }
+  .lbl { font-size: 26px; line-height: 34px; color: var(--meta); margin-top: 12px; text-align: center; }
+  .tile { width: 464px; height: 261px; position: relative; }
+  .poster { width: 288px; height: 432px; position: relative; }
+  table { border-collapse: collapse; width: 100%; font-size: 26px; line-height: 36px; }
+  td, th { text-align: left; padding: 12px 16px 12px 0; border-top: 1px solid rgba(255,255,255,.08); vertical-align: top; }
+  th { color: var(--meta); font-weight: 500; border-top: 0; }
+  td.m { font-family: Menlo, monospace; color: var(--meta); white-space: nowrap; }
+
+  /* ---- looping focus demos ---- */
+  @keyframes cardFocA { 0%, 42% { box-shadow: 0 0 0 4px #fff, var(--shadow); transform: scale(1.05); } 50%, 92% { box-shadow: 0 0 0 4px rgba(255,255,255,0), 0 0 0 0 rgba(0,0,0,0); transform: scale(1); } 100% { box-shadow: 0 0 0 4px #fff, var(--shadow); transform: scale(1.05); } }
+  @keyframes cardFocB { 0%, 42% { box-shadow: 0 0 0 4px rgba(255,255,255,0), 0 0 0 0 rgba(0,0,0,0); transform: scale(1); } 50%, 92% { box-shadow: 0 0 0 4px #fff, var(--shadow); transform: scale(1.05); } 100% { box-shadow: 0 0 0 4px rgba(255,255,255,0), 0 0 0 0 rgba(0,0,0,0); transform: scale(1); } }
+  .fa { box-shadow: 0 0 0 4px #fff, var(--shadow); transform: scale(1.05); animation: cardFocA 5s var(--move) infinite; z-index: 2; } .fb { animation: cardFocB 5s var(--move) infinite; }
+  @keyframes btnFocA { 0%, 42% { background: #F2F2F2; border-color: #F2F2F2; color: #0B0E14; transform: scale(1.05); } 50%, 92% { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.33); color: #fff; transform: scale(1); } 100% { background: #F2F2F2; border-color: #F2F2F2; color: #0B0E14; transform: scale(1.05); } }
+  @keyframes btnFocB { 0%, 42% { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.33); color: #fff; transform: scale(1); } 50%, 92% { background: #F2F2F2; border-color: #F2F2F2; color: #0B0E14; transform: scale(1.05); } 100% { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.33); color: #fff; transform: scale(1); } }
+  .ba { background: #F2F2F2; border-color: #F2F2F2; color: #0B0E14; transform: scale(1.05); animation: btnFocA 5s var(--move) infinite; } .bb { animation: btnFocB 5s var(--move) infinite; }
+  @keyframes rowFocA { 0%, 42% { background: rgba(255,255,255,.15); transform: scale(1.02); } 50%, 92% { background: rgba(255,255,255,0); transform: scale(1); } 100% { background: rgba(255,255,255,.15); transform: scale(1.02); } }
+  @keyframes rowFocB { 0%, 42% { background: rgba(255,255,255,0); transform: scale(1); } 50%, 92% { background: rgba(255,255,255,.15); transform: scale(1.02); } 100% { background: rgba(255,255,255,0); transform: scale(1); } }
+  .ra { background: rgba(255,255,255,.15); transform: scale(1.02); font-weight: 700; animation: rowFocA 5s var(--move) infinite; } .rb { animation: rowFocB 5s var(--move) infinite; }
+
+  /* ---- motion demos (4 s cycles) ---- */
+  .lane { height: 56px; border-radius: 28px; background: rgba(255,255,255,.06); position: relative; margin-top: 14px; }
+  .lane i { position: absolute; left: 6px; top: 6px; width: 44px; height: 44px; border-radius: 50%; background: #fff; }
+  @keyframes travel { 0%, 10% { transform: translateX(0); } 18%, 60% { transform: translateX(560px); } 68%, 100% { transform: translateX(0); } }
+  .lane .new { animation: travel 4s cubic-bezier(.2,0,0,1) infinite; }
+  .lane .old { animation: travel 4s cubic-bezier(.33,1,.68,1) infinite; background: var(--dim); }
+  .mbox { width: 300px; height: 169px; border-radius: 14px; overflow: hidden; position: relative; background: var(--panel); }
+  @keyframes fadeIO { 0%, 10% { opacity: 0; animation-timing-function: cubic-bezier(0,0,.2,1); } 15%, 60% { opacity: 1; animation-timing-function: cubic-bezier(.4,0,1,1); } 63%, 100% { opacity: 0; } }
+  .m-fade { animation: fadeIO 4s infinite; }
+  @keyframes popIO { 0%, 10% { width: 300px; height: 169px; animation-timing-function: cubic-bezier(.2,0,0,1); } 17%, 62% { width: 434px; height: 340px; animation-timing-function: cubic-bezier(.2,0,0,1); } 65.500%, 100% { width: 300px; height: 169px; } }
+  @keyframes popPanel { 0%, 12% { opacity: 0; animation-timing-function: cubic-bezier(0,0,.2,1); } 16%, 62% { opacity: 1; animation-timing-function: cubic-bezier(.4,0,1,1); } 64.500%, 100% { opacity: 0; } }
+  .m-pop { animation: popIO 4s infinite; background: var(--raised); box-shadow: 0 0 0 4px #fff, var(--shadow); border-radius: 16px; overflow: hidden; position: absolute; left: 36px; top: 36px; width: 434px; height: 340px; }
+  .m-pop img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+  .m-pop .pp { position: absolute; left: 20px; top: 262px; display: flex; gap: 12px; animation: popPanel 4s infinite; }
+  .m-stage { width: 520px; height: 292px; border-radius: 14px; overflow: hidden; position: relative; background: #000; }
+  .m-stage img { width: 100%; height: 100%; object-fit: cover; }
+  @keyframes sheetIO { 0%, 10% { opacity: 0; transform: translateX(48px); animation-timing-function: cubic-bezier(.2,0,0,1); } 16%, 60% { opacity: 1; transform: none; animation-timing-function: cubic-bezier(.4,0,1,1); } 64%, 100% { opacity: 0; transform: translateX(48px); } }
+  .m-sheet { position: absolute; right: 0; top: 0; width: 260px; height: 100%; background: linear-gradient(90deg, rgba(11,14,20,0), rgba(11,14,20,.95) 70px); animation: sheetIO 4s infinite; }
+  .m-sheet b { position: absolute; left: 96px; top: 28px; font-size: 26px; }
+  .m-sheet u { position: absolute; left: 86px; right: 14px; height: 40px; border-radius: 8px; background: rgba(255,255,255,.15); top: 84px; }
+  @keyframes ovTop { 0%, 8% { opacity: 0; transform: translateY(-16px); animation-timing-function: cubic-bezier(.2,0,0,1); } 12.500%, 55% { opacity: 1; transform: none; animation-timing-function: ease-in-out; } 65%, 100% { opacity: 0; transform: none; } }
+  @keyframes ovBot { 0%, 8% { opacity: 0; transform: translateY(16px); animation-timing-function: cubic-bezier(.2,0,0,1); } 12.500%, 55% { opacity: 1; transform: none; animation-timing-function: ease-in-out; } 65%, 100% { opacity: 0; transform: none; } }
+  .m-top { position: absolute; left: 0; top: 0; width: 100%; height: 110px; background: linear-gradient(180deg, rgba(0,0,0,.85), rgba(0,0,0,0)); animation: ovTop 4s infinite; }
+  .m-top b { position: absolute; left: 24px; top: 16px; font-size: 28px; }
+  .m-bot { position: absolute; left: 0; bottom: 0; width: 100%; height: 140px; background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.9)); animation: ovBot 4s infinite; }
+  .m-bot .progress { position: absolute; left: 24px; right: 24px; bottom: 30px; }
+</style></head>
+<body>
+<main>
+  <div class="wordmark" style="font-size:56px;height:64px;line-height:64px;gap:18px"><svg style="width:60px;height:60px"><use href="#i-mark"/></svg>direct</div>
+  <h1>Design system proposal</h1>
+  <div class="note">Blue-black ink, artwork doing the colour, white for <b>where you are</b>, one warm amber for <b>what is yours</b>: your progress, your selection, the one thing to press. Sized for 3 m from a 55" panel; every component below is drawn at its real 1920×1080 size. The wordmark and the name "direct" are placeholders.</div>
+
+  <section>
+    <h2>Palette</h2>
+    <div class="note">Four surfaces, three text tones, one accent, one status colour. Chips, badges and quality labels are neutral.</div>
+    <div class="grid" style="grid-template-columns:repeat(6,1fr)">
+      <div class="sw"><div class="c" style="background:#0B0E14"></div><div class="d"><div class="n">Ink</div><div class="h">#0B0E14</div><div class="u">Page, scrims, sheet base</div></div></div>
+      <div class="sw"><div class="c" style="background:#151A22"></div><div class="d"><div class="n">Panel</div><div class="h">#151A22</div><div class="u">Cards before art loads, chips</div></div></div>
+      <div class="sw"><div class="c" style="background:#1E2530"></div><div class="d"><div class="n">Raised</div><div class="h">#1E2530</div><div class="u">Pop-out card panel, dialogs</div></div></div>
+      <div class="sw"><div class="c" style="background:#2A3340"></div><div class="d"><div class="n">Line</div><div class="h">#2A3340</div><div class="u">Hairlines, keyboard keys</div></div></div>
+      <div class="sw"><div class="c" style="background:#FFB23E"></div><div class="d"><div class="n">Amber</div><div class="h">#FFB23E</div><div class="u">Progress, selected, primary Play. Never focus.</div></div></div>
+      <div class="sw"><div class="c" style="background:#5AD1A0"></div><div class="d"><div class="n">Ready</div><div class="h">#5AD1A0</div><div class="u">Source health, ready to play</div></div></div>
+      <div class="sw"><div class="c" style="background:#FFFFFF"></div><div class="d"><div class="n">Text / focus ring</div><div class="h">#FFFFFF</div><div class="u">Titles, prose, card ring</div></div></div>
+      <div class="sw"><div class="c" style="background:#F2F2F2"></div><div class="d"><div class="n">Focus fill</div><div class="h">#F2F2F2</div><div class="u">Focused buttons and chips, ink label</div></div></div>
+      <div class="sw"><div class="c" style="background:#30343B"></div><div class="d"><div class="n">Focus row</div><div class="h">#FFFFFF 15%</div><div class="u">Focused list row over video or ink</div></div></div>
+      <div class="sw"><div class="c" style="background:#A9B1BD"></div><div class="d"><div class="n">Meta</div><div class="h">#A9B1BD</div><div class="u">Facts, captions, values (8.9:1 on ink)</div></div></div>
+      <div class="sw"><div class="c" style="background:#7E8794"></div><div class="d"><div class="n">Dim</div><div class="h">#7E8794</div><div class="u">Column headers, separators (5.3:1)</div></div></div>
+      <div class="sw"><div class="c" style="background:linear-gradient(90deg,rgba(255,255,255,.12),rgba(255,255,255,.33))"></div><div class="d"><div class="n">Glass</div><div class="h">#FFFFFF 12% / 33%</div><div class="u">Button fill / button border</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Accent: choose one</h2>
+    <div class="note">The same four uses in three candidates. Amber is the proposal. Any mock opens in another accent by adding <b>?accent=ember</b> or <b>?accent=ice</b> to its address; Home is also rendered in both (01-home-ember.png, 01-home-ice.png).</div>
+    <div class="grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="demo" style="--accent:#FFB23E"><div class="n" style="font-size:34px;font-weight:700;margin-bottom:24px">Amber #FFB23E <span class="badge" style="margin-left:10px">Proposed</span></div>
+        <div class="hrow" style="flex-wrap:nowrap"><div class="btn primary" style="min-width:200px"><svg class="i"><use href="#i-play"/></svg>Play</div><span class="badge accent">Best match</span><div class="rank rel" style="border-radius:0 0 12px 0">3</div></div>
+        <div class="progress" style="margin-top:28px"><i style="width:45%"></i></div>
+        <div class="cap">Warm against the cool ink, reads as light rather than alarm, far from Netflix red. Close to IMDb yellow, so the rating star stays white.</div></div>
+      <div class="demo" style="--accent:#FF7A45"><div class="n" style="font-size:34px;font-weight:700;margin-bottom:24px">Ember #FF7A45</div>
+        <div class="hrow" style="flex-wrap:nowrap"><div class="btn primary" style="min-width:200px"><svg class="i"><use href="#i-play"/></svg>Play</div><span class="badge accent">Best match</span><div class="rank rel" style="border-radius:0 0 12px 0">3</div></div>
+        <div class="progress" style="margin-top:28px"><i style="width:45%"></i></div>
+        <div class="cap">More energy, more "brand". Sits nearer to red, so it is closer to the look we are leaving, and it can read as a warning on error screens.</div></div>
+      <div class="demo" style="--accent:#7FD4FF"><div class="n" style="font-size:34px;font-weight:700;margin-bottom:24px">Ice #7FD4FF</div>
+        <div class="hrow" style="flex-wrap:nowrap"><div class="btn primary" style="min-width:200px"><svg class="i"><use href="#i-play"/></svg>Play</div><span class="badge accent">Best match</span><div class="rank rel" style="border-radius:0 0 12px 0">3</div></div>
+        <div class="progress" style="margin-top:28px"><i style="width:45%"></i></div>
+        <div class="cap">Calm and technical, tone-on-tone with the ink. Lowest contrast with the white focus colour, so Play stands out least.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Type ramp</h2>
+    <div class="note">Helvetica Neue on the Mac preview, the TV's system sans on the RU7100. Four working sizes with clear jumps (28 → 34 → 40 → 56) replace 26/28/30/32/34. Display is only for a hero title without a logo; Label is only for badges.</div>
+    <div class="ramp">
+      <div><span class="k">Display · 72 bold · −1%</span><span class="t-display">Breaking Bad</span></div>
+      <div><span class="k">Title · 56 bold · −1%</span><span class="t-title">Sources</span></div>
+      <div><span class="k">Heading · 40 bold</span><span class="t-head">Continue watching</span></div>
+      <div><span class="k">Body · 34 regular, 600 for buttons and rows</span><span class="t-body">A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing…</span></div>
+      <div><span class="k">Meta · 28 medium · #A9B1BD</span><span class="t-meta">2008–2013 · 5 seasons · <span class="white">★ 9.5</span> · Crime, Drama, Thriller</span></div>
+      <div><span class="k">Label · 26 bold (floor)</span><span><span class="badge">HD</span> <span class="badge outline">Spanish subs</span> <span class="badge strong">4K</span> <span class="badge accent">Best match</span></span></div>
+      <div><span class="k">Subtitles · 46 semibold · outline 3</span><span style="font-size:46px;line-height:60px;font-weight:600;color:#F5F5F5;-webkit-text-stroke:6px #000;paint-order:stroke fill">We need to get our stories straight. &nbsp; Tenemos que poner en orden nuestras historias.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Shapes</h2>
+    <div class="note">Rounded, never sharp, never bubbly. Sheets are square because they are part of the screen edge.</div>
+    <div class="hrow" style="gap:40px;align-items:flex-start">
+      <div><div class="shape" style="border-radius:14px"></div><div class="lbl">Card 14</div></div>
+      <div><div class="shape" style="border-radius:16px"></div><div class="lbl">Pop-out card 16</div></div>
+      <div><div class="shape" style="border-radius:12px;height:76px"></div><div class="lbl">List row 12</div></div>
+      <div><div class="shape" style="border-radius:8px;width:120px;height:44px"></div><div class="lbl">Badge 8</div></div>
+      <div><div class="shape" style="border-radius:40px;height:80px"></div><div class="lbl">Button, chip: pill</div></div>
+      <div><div class="shape" style="border-radius:50%;width:72px;height:72px"></div><div class="lbl">Icon 72</div></div>
+      <div><div class="shape" style="border-radius:0;width:150px;height:112px;border-right:0"></div><div class="lbl">Edge sheet 0</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Focus: three rules, one colour</h2>
+    <div class="note">White always means "you are here". Cards get a ring and lift, buttons fill, list rows get a soft fill. Amber never moves with the remote. The demos loop.</div>
+    <div class="grid" style="grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1.1fr)">
+      <div class="demo"><div class="hrow" style="gap:32px;flex-wrap:nowrap;padding:14px">
+          <div class="card tile fa" style="width:330px;height:186px;flex:none"><img class="cover p" src="assets/bb-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="9000" style="width:180px;height:80px;bottom:22px"><img src="assets/bb-logo.png" alt=""></div><div class="progress" style="left:16px;right:16px;bottom:10px"><i style="width:45%"></i></div></div>
+          <div class="card tile fb" style="width:330px;height:186px;flex:none"><img class="cover p" src="assets/fauda-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="9000" style="width:180px"><img src="assets/fauda-logo.png" alt=""></div></div></div>
+        <div class="cap"><b>Card:</b> 4 px white ring at radius +4, soft 48 px shadow, scale 1.05 (posters 1.06) from centre, 200 ms. No glow band, no dark outer border.</div></div>
+      <div class="demo"><div class="hrow" style="padding:14px 6px"><div class="btn ba">Episodes</div><div class="btn bb">Sources</div></div>
+        <div class="hrow" style="padding:22px 6px 6px"><div class="btn primary"><svg class="i"><use href="#i-play"/></svg>Play</div><div class="btn primary focus" style="margin-left:18px"><svg class="i"><use href="#i-play"/></svg>Play</div></div>
+        <div class="cap"><b>Button:</b> fills #F2F2F2 with ink label, scale 1.05. <b>Play</b> is the exception: it stays amber and takes the white ring, so it is primary at rest and focused.</div></div>
+      <div class="demo"><div style="padding:6px 8px">
+          <div class="row ra"><svg class="tick"><use href="#i-check"/></svg>Spanish<span class="val">OpenSubtitles</span></div>
+          <div class="row rb"><svg class="tick off"><use href="#i-check"/></svg>English<span class="val">OpenSubtitles</span></div>
+          <div class="row"><svg class="tick off"><use href="#i-check"/></svg>Off</div></div>
+        <div class="cap"><b>List row:</b> white 15% fill, radius 12, scale 1.02, 150 ms. The amber tick marks the selected item and stays put while focus moves.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <div class="note">One primary button per screen. Secondary actions are icon buttons; the label of the focused one shows beneath it.</div>
+    <div class="demo">
+      <div class="hrow">
+        <div class="btn primary"><svg class="i"><use href="#i-play"/></svg>Resume S2:E3</div>
+        <div class="ibtn"><svg class="i"><use href="#i-film"/></svg></div><div class="ibtn"><svg class="i"><use href="#i-plus"/></svg></div>
+        <div style="position:relative"><div class="ibtn focus"><svg class="i" style="width:30px;height:30px"><use href="#i-thumb"/></svg></div><div class="t-meta white" style="position:absolute;left:50%;top:84px;transform:translateX(-50%)">Rate</div></div>
+        <div class="ibtn"><svg class="i"><use href="#i-dots"/></svg></div>
+        <span style="width:40px"></span>
+        <div class="btn">Episodes</div><div class="btn focus">Sources</div>
+      </div>
+      <div class="hrow" style="margin-top:64px">
+        <div class="chip">Any genre</div><div class="chip sel"><svg class="i" style="width:26px;height:26px"><use href="#i-check"/></svg>Thriller</div><div class="chip focus">2020s</div>
+      </div>
+      <div class="hrow" style="margin-top:40px">
+        <span class="badge">HD</span><span class="badge">1080p</span><span class="badge strong">4K</span><span class="badge strong">HDR</span><span class="badge outline">Spanish subs</span><span class="badge outline">EN</span><span class="badge outline">RU</span><span class="badge accent">Best match</span>
+        <span class="t-meta" style="display:flex;align-items:center;gap:8px;margin-left:16px"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="white" style="margin-left:8px">508</span></span>
+        <span class="t-meta" style="display:flex;align-items:center;gap:12px;margin-left:16px"><i class="dot"></i><span class="white">Ready to play</span></span>
+      </div>
+      <div class="cap">Buttons 80 high (Play 88), icon buttons 72, chips 64, badges 44. Selected chip: amber outline and tick. 4K and HDR get a white outline; every other quality label is the same neutral badge.</div>
+    </div>
+    <div class="grid" style="grid-template-columns:1fr 1.4fr;margin-top:24px">
+      <div class="demo"><div class="progress" style="margin:20px 0"><i style="width:45%"></i></div>
+        <div class="cap"><b>Watch progress:</b> 6 px, radius 3, amber on white 20%. On cards, episode stills and the title page.</div></div>
+      <div class="demo"><div style="position:relative;height:74px">
+          <div style="position:absolute;left:0;top:0;font-size:34px;font-weight:600">22:03</div><div style="position:absolute;right:0;top:0;font-size:34px;font-weight:600">-26:57</div>
+          <div style="position:absolute;left:0;right:0;top:58px;height:6px;border-radius:3px;background:rgba(255,255,255,.2)"></div>
+          <div style="position:absolute;left:0;width:58%;top:58px;height:6px;border-radius:3px;background:rgba(255,255,255,.45)"></div>
+          <div style="position:absolute;left:0;width:45%;top:58px;height:6px;border-radius:3px;background:var(--accent)"></div>
+          <div style="position:absolute;left:45%;top:47px;width:28px;height:28px;margin-left:-14px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.5)"></div></div>
+        <div class="cap"><b>Transport:</b> amber played, white 45% buffered, white 20% track, 28 px white playhead (36 while seeking), elapsed and remaining in tabular 34 semibold.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cards</h2>
+    <div class="note">Art first. Title logos sit on a bottom scrim so pale logos hold on bright stills; logos are fitted by area so wide and tall ones carry the same weight.</div>
+    <div class="demo"><div class="hrow" style="gap:32px;align-items:flex-start">
+      <div><div class="card tile"><img class="cover p" src="assets/bb-bg.jpg" alt=""><div class="scrim"></div><div class="logo" data-area="14000" style="height:96px"><img src="assets/bb-logo.png" alt=""></div><div class="progress" style="left:18px;right:18px;bottom:12px;position:absolute"><i style="width:45%"></i></div></div><div class="lbl">Landscape 464×261, with progress</div></div>
+      <div><div class="card tile"><img class="cover p" src="assets/bb-s2e3.jpg" alt=""><div class="progress" style="left:18px;right:18px;bottom:12px;position:absolute"><i style="width:45%"></i></div></div><div style="font-size:34px;font-weight:600;line-height:44px;margin-top:14px">3. Bit by a Dead Bee</div><div class="t-meta">26 min left</div></div>
+      <div><div class="card poster"><img class="cover p" src="assets/top1-poster.jpg" alt=""><div class="rank">1</div></div><div class="lbl">Top 10: solid rank badge</div></div>
+      <div><div class="card poster"><img class="cover p" src="assets/top2-poster.jpg" alt=""><div class="rank">2</div></div><div class="lbl">Poster 288×432</div></div>
+    </div></div>
+    <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-top:24px">
+      <div class="demo"><div style="height:120px;position:relative"><img src="assets/severance-logo.png" alt="" style="height:70px;position:absolute;left:0;top:25px"></div><div class="cap"><b>Before:</b> Severance's logo is black. On the page it disappears.</div></div>
+      <div class="demo"><div style="height:120px;position:relative"><div style="position:absolute;left:-60px;top:-50px;width:540px;height:220px;background:radial-gradient(closest-side,rgba(255,255,255,.34),rgba(255,255,255,0))"></div><img src="assets/severance-logo.png" alt="" style="height:70px;position:absolute;left:0;top:25px"></div><div class="cap"><b>Light plate:</b> logos with mean luminance under 0.35 get a pre-rendered soft white radial behind them.</div></div>
+      <div class="demo"><div style="height:120px;display:flex;align-items:center"><span class="t-display">Severance</span></div><div class="cap"><b>Or text:</b> under 0.1 (pure black logos) draw the Display title instead. My preference for these.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Scrims</h2>
+    <div class="note">All gradients are pre-rendered images stretched by the painter. No bands, no blur.</div>
+    <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+      <div class="demo" style="padding:0;overflow:hidden"><div style="height:240px;position:relative"><img class="cover p" src="assets/dune-bg.jpg" alt=""><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,14,20,.7),rgba(11,14,20,0) 60%)"></div></div><div class="cap" style="padding:0 24px 24px"><b>Menu:</b> ink 70% → 0 over the top 180 px</div></div>
+      <div class="demo" style="padding:0;overflow:hidden"><div style="height:240px;position:relative"><img class="cover p" src="assets/dune-bg.jpg" alt=""><div style="position:absolute;inset:0;background:linear-gradient(90deg,#0B0E14 0%,rgba(11,14,20,.85) 30%,rgba(11,14,20,0) 70%)"></div><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,14,20,0) 45%,#0B0E14 100%)"></div></div><div class="cap" style="padding:0 24px 24px"><b>Hero and title page:</b> ink from the left and from below</div></div>
+      <div class="demo" style="padding:0;overflow:hidden"><div style="height:240px;position:relative"><img class="cover p" src="assets/dune-bg.jpg" alt=""><div style="position:absolute;left:0;right:0;top:0;height:30%;background:linear-gradient(180deg,rgba(0,0,0,.86),rgba(0,0,0,0))"></div><div style="position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.9))"></div></div><div class="cap" style="padding:0 24px 24px"><b>Player:</b> black 86% → 0 top 260 px, 0 → 90% bottom 460 px</div></div>
+      <div class="demo" style="padding:0;overflow:hidden"><div style="height:240px;position:relative"><img class="cover p" src="assets/dune-bg.jpg" alt=""><div style="position:absolute;inset:0;background:rgba(0,0,0,.4)"></div><div style="position:absolute;right:0;top:0;bottom:0;width:55%;background:linear-gradient(90deg,rgba(11,14,20,0),rgba(11,14,20,.95) 28%)"></div></div><div class="cap" style="padding:0 24px 24px"><b>Sheet:</b> black 40% dim + ink 95% from the right edge, 200 px lead-in</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Motion</h2>
+    <div class="note">Two curves. Things that <b>travel or scale</b> use cubic-bezier(0.2, 0, 0, 1): quick off the mark, long soft landing. Things that <b>appear or leave</b> fade: ease-out in, ease-in out, and out is always shorter than in. Order: focus first, content second, atmosphere last. Only position, scale and opacity change. Demos loop every 4 s.</div>
+    <div class="grid" style="grid-template-columns:1.2fr 1fr 1fr">
+      <div class="demo"><div class="lbl" style="text-align:left;margin:0;color:#fff">Move curve, 320 ms</div><div class="lane"><i class="new"></i></div>
+        <div class="lbl" style="text-align:left;color:var(--dim)">Today: ease-out-cubic, same time</div><div class="lane"><i class="old"></i></div>
+        <div class="cap"><b>Row scroll</b> (both axes) 320 ms; <b>focus</b> ring and scale 200 ms; list rows 150 ms.</div></div>
+      <div class="demo" style="height:570px"><div class="m-pop"><img src="assets/interstellar-bg.jpg" alt=""><div class="pp"><div class="btn primary sm"><svg class="i" style="width:30px;height:30px"><use href="#i-play"/></svg>Play</div><div class="ibtn sm"><svg class="i"><use href="#i-plus"/></svg></div></div></div>
+        <div class="cap" style="position:absolute;left:36px;right:36px;bottom:30px;margin:0"><b>Pop-out:</b> grows 280 ms; panel fades in 160 ms after 80 ms. Exit: 140 ms back, panel out in 100 ms.</div></div>
+      <div class="demo"><div class="mbox m-fade"><img class="cover p" src="assets/dune-bg.jpg" alt=""></div>
+        <div class="cap"><b>Fade:</b> in 200 ms ease-out, out 120 ms ease-in. Text swaps 120 ms. Backdrops wait until focus rests 300 ms, then cross-fade 500 ms.</div></div>
+    </div>
+    <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:24px">
+      <div class="demo"><div class="m-stage"><img src="assets/bb-s2e3.jpg" alt=""><div class="m-top"><b>Breaking Bad</b></div><div class="m-bot"><div class="progress"><i style="width:45%"></i></div></div></div>
+        <div class="cap"><b>Player overlay:</b> in 180 ms, title drops 16 px, transport rises 16 px. Auto-hide: 400 ms ease-in-out, opacity only, no travel. Dismissed with Back: 160 ms.</div></div>
+      <div class="demo"><div class="m-stage"><img src="assets/bb-s2e3.jpg" alt=""><div class="m-sheet"><b>Audio</b><u></u></div></div>
+        <div class="cap"><b>Edge sheet:</b> in 240 ms, 48 px slide plus fade on the move curve. Out 160 ms ease-in.</div></div>
+    </div>
+    <div class="demo" style="margin-top:24px"><table>
+      <tr><th>What</th><th>In</th><th>Out</th><th>Curve</th></tr>
+      <tr><td>Focus ring and scale</td><td class="m">200 ms</td><td class="m">200 ms</td><td class="m">move</td></tr>
+      <tr><td>Row scroll, horizontal and vertical</td><td class="m">320 ms</td><td class="m">—</td><td class="m">move</td></tr>
+      <tr><td>Pop-out card / its panel</td><td class="m">280 ms / 160 ms after 80</td><td class="m">140 ms / 100 ms</td><td class="m">move / fade</td></tr>
+      <tr><td>Screen change</td><td class="m">260 ms fade + 24 px rise</td><td class="m">120 ms fade</td><td class="m">move / fade</td></tr>
+      <tr><td>Backdrop and trailer</td><td class="m">500 ms after 300 ms rest</td><td class="m">500 ms</td><td class="m">ease-in-out</td></tr>
+      <tr><td>Player overlay</td><td class="m">180 ms, 16 px</td><td class="m">400 ms auto / 160 ms Back</td><td class="m">move / ease-in-out</td></tr>
+      <tr><td>Edge sheet</td><td class="m">240 ms, 48 px</td><td class="m">160 ms</td><td class="m">move / fade</td></tr>
+      <tr><td>Reduced motion</td><td class="m" colspan="3">all travel and scale off; fades at 120 ms</td></tr>
+    </table></div>
+  </section>
+</main>
+<script src="mock.js"></script>
+<script>(function(){function z(){document.body.style.zoom=Math.min(1,innerWidth/1920)}z();addEventListener('resize',z)})();</script>
+</body></html>

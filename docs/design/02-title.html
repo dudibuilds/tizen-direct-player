@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>02 Title page</title>
+<link rel="stylesheet" href="mock.css">
+<style>
+  /* State A (PNG): focus on the primary Play button. State B: focus has moved down to episode 3;
+     Play stays amber, the info block swaps to the focused episode (120 ms text fade). */
+  .info { left: 96px; top: 300px; width: 980px; transition: opacity 120ms linear; }
+  .info.series { opacity: 0; } .a .info.series { opacity: 1; }
+  .info.episode { opacity: 1; } .a .info.episode { opacity: 0; }
+  .actions { left: 96px; top: 428px; display: flex; align-items: center; gap: 20px; }
+  .actions .btn.primary { margin-right: 12px; }
+  .stage:not(.a) .actions .btn.primary { outline-color: rgba(255,255,255,0); transform: none; }
+  .tabs { left: 96px; top: 566px; display: flex; gap: 52px; }
+  .tabs div { font-size: 34px; line-height: 48px; color: var(--meta); font-weight: 500; position: relative; }
+  .tabs .sel { color: #fff; font-weight: 700; }
+  .tabs .sel::after { content: ''; position: absolute; left: 0; bottom: -8px; width: 28px; height: 4px; border-radius: 2px; background: var(--accent); }
+  .ep { width: 448px; height: 252px; top: 644px; }
+  .ep .progress { left: 16px; right: 16px; bottom: 14px; }
+  .ep .seen { right: 14px; top: 14px; width: 44px; height: 44px; border-radius: 50%; background: rgba(11,14,20,.78); display: flex; align-items: center; justify-content: center; }
+  .ep .seen svg { width: 26px; height: 26px; }
+  .stage:not(.a) .ep.cur { box-shadow: 0 0 0 4px var(--focus), var(--shadow); transform: scale(1.05); z-index: 3; }
+  .cap { top: 910px; width: 448px; transition: transform var(--t-focus) var(--move); }
+  .cap .n { font-size: 34px; line-height: 44px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .stage:not(.a) .cap.cur { transform: translateY(7px); }
+</style></head>
+<body>
+<div class="stage a" data-hold-a="4200" data-hold-b="3200">
+  <!-- full-bleed backdrop with two pre-rendered scrims -->
+  <div class="layer" style="left:300px;top:0;width:1920px;height:1080px"><img class="cover" src="assets/bb-bg.jpg" alt=""></div>
+  <div style="left:0;top:0;width:1300px;height:1080px;background:linear-gradient(90deg,#0B0E14 0%,#0B0E14 24%,rgba(11,14,20,.88) 52%,rgba(11,14,20,0) 100%)"></div>
+  <div style="left:0;top:330px;width:1920px;height:750px;background:linear-gradient(180deg,rgba(11,14,20,0) 0%,rgba(11,14,20,.86) 38%,#0B0E14 62%)"></div>
+
+  <div class="layer" data-area="52000" style="left:96px;top:60px;width:400px;height:176px"><img src="assets/bb-logo.png" alt="Breaking Bad"></div>
+
+  <div class="t-meta nowrap" style="left:96px;top:250px;display:flex;align-items:center">2008–2013<span class="sep"></span>5 seasons<span class="sep"></span><span class="white">★ 9.5</span><span class="sep"></span>Crime, Drama, Thriller<span class="badge" style="margin-left:24px">HD</span><span class="badge outline" style="margin-left:10px">Spanish subs</span></div>
+
+  <div class="info series t-body shadowed" style="width:940px">A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with…</div>
+  <div class="info episode t-body shadowed"><span class="b">3. Bit by a Dead Bee</span><span class="t-meta" style="margin-left:18px">49 min · 26 min left</span><br><span style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Walt and Jesse cover their tracks, but as a result, both of their financial situations suffer.</span></div>
+
+  <!-- one primary action, secondary actions as icon buttons -->
+  <div class="actions">
+    <div class="btn primary focus"><svg class="i"><use href="#i-play"/></svg>Resume S2:E3</div>
+    <div class="ibtn"><svg class="i"><use href="#i-film"/></svg></div>
+    <div class="ibtn"><svg class="i"><use href="#i-check"/></svg></div>
+    <div class="ibtn"><svg class="i" style="width:30px;height:30px"><use href="#i-thumb"/></svg></div>
+    <div class="ibtn"><svg class="i"><use href="#i-dots"/></svg></div>
+  </div>
+
+  <!-- seasons -->
+  <div class="tabs"><div>Season 1</div><div class="sel">Season 2</div><div>Season 3</div><div>Season 4</div><div>Season 5</div><div>Specials</div></div>
+  <div class="t-meta" style="right:96px;top:570px">Episode 3 of 13</div>
+
+  <!-- episode rail with stills -->
+  <div class="card ep" style="left:96px"><img class="cover" src="assets/bb-s2e2.jpg" alt=""><div class="seen"><svg class="i"><use href="#i-check"/></svg></div></div>
+  <div class="cap" style="left:96px"><div class="n">2. Grilled</div><div class="t-meta">Watched</div></div>
+
+  <div class="card ep cur" style="left:576px"><img class="cover" src="assets/bb-s2e3.jpg" alt=""><div style="left:0;right:0;bottom:0;height:40%;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.6))"></div><div class="progress"><i style="width:45%"></i></div></div>
+  <div class="cap cur" style="left:576px"><div class="n">3. Bit by a Dead Bee</div><div class="t-meta">26 min left</div></div>
+
+  <div class="card ep" style="left:1056px"><img class="cover" src="assets/bb-s2e4.jpg" alt=""></div>
+  <div class="cap" style="left:1056px"><div class="n">4. Down</div><div class="t-meta">49 min</div></div>
+
+  <div class="card ep" style="left:1536px"><img class="cover" src="assets/bb-s2e5.jpg" alt=""></div>
+  <div class="cap" style="left:1536px"><div class="n">5. Breakage</div><div class="t-meta">49 min</div></div>
+</div>
+<script src="mock.js"></script>
+</body></html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>09 Launch intro</title>
+<link rel="stylesheet" href="mock.css">
+<style>
+  /* Launch intro, about 2.6 s, then the hand-off into Home. Only translate, scale and opacity, flat fills and
+     gradients, so the TV painter draws it the same way (each letter is its own text node there).
+       0.0 s  Splash: the Tizen launcher shows the front chevron alone, centred, before any app code runs.
+       0.4 s  Beat 1 (low swell starts): the back chevron slides out from behind the front one; the front one
+              nudges forward and settles. It reads as play turning into fast-forward.
+       0.8 s  An amber bloom opens behind the mark and settles to a faint glow.
+       1.0 s  "direct" rises in letter by letter, 45 ms apart. Beat 2 (a bright tap) lands on the "t".
+       2.6 s  Hand-off: the lockup flies to the Home menu's wordmark position and size while Home fades in
+              under it. Home's menu draws no wordmark of its own until the lockup lands; the lockup is built at
+              the menu wordmark's exact proportions (gap and tracking), so on landing it simply becomes that
+              wordmark. There is only ever one logo on screen.
+     If Home is still loading at 2.6 s, the lockup holds and a thin amber line fills under it until it is ready.
+     Any key skips straight to the hand-off. ?still shows the settled lockup; ?at=landed shows the hand-off's end frame. */
+  .home { left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 200ms var(--fade-out); }
+  .s4 .home { opacity: 1; transition: opacity 600ms var(--fade-in) 150ms; }
+
+  .bloom { left: 960px; top: 540px; width: 1000px; height: 1000px; margin: -500px 0 0 -500px; border-radius: 50%; opacity: 0; transform: scale(.4);
+    background: radial-gradient(closest-side, rgba(255,178,62,.30), rgba(255,178,62,.10) 45%, rgba(255,178,62,0)); transition: opacity 200ms linear, transform 200ms linear; }
+  .s2 .bloom { opacity: .55; transform: scale(1); transition: opacity 500ms var(--fade-in), transform 900ms var(--move); }
+  .s3 .bloom { opacity: .35; }
+  .s4 .bloom { opacity: 0; transform: scale(.6); transition: opacity 300ms var(--fade-out), transform 400ms var(--fade-out); }
+
+  /* the lockup sits centred as a whole; the mark starts centred on its own (offset) and travels left as the word arrives */
+  .lockup { left: 705px; top: 474px; width: 520px; height: 132px; transform-origin: 0 0;
+    transition: transform 200ms var(--fade-out), opacity 200ms linear; }
+  .s4 .lockup { transform: translate(-609px, -414px) scale(.30303); transition: transform 700ms var(--move); }
+  .mark { left: 0; top: 0; width: 132px; height: 132px; transform: translateX(189px); transition: transform 200ms linear; }
+  .s3 .mark, .s4 .mark { transform: none; transition: transform 640ms var(--move); }
+  .mark svg { position: absolute; left: 0; top: 0; width: 132px; height: 132px; color: var(--accent); fill: currentColor; }
+  .back { opacity: 0; transform: translateX(-46px); transition: opacity 150ms linear, transform 150ms linear; }
+  .s1 .back { opacity: .55; transform: none; transition: opacity 260ms var(--fade-in), transform 420ms var(--move); }
+  .front { transform: none; transition: transform 150ms linear; }
+  .s1 .front { animation: nudge 520ms var(--move) both; }
+  @keyframes nudge { 0% { transform: none; } 45% { transform: translateX(10px); } 100% { transform: none; } }
+
+  .word { left: 172px; top: 0; height: 132px; display: flex; }
+  .word span { position: relative; font-size: 119px; line-height: 132px; font-weight: 700; letter-spacing: -.02em; color: #fff;
+    opacity: 0; transform: translateY(34px); transition: opacity 120ms linear, transform 120ms linear; }
+  .s3 .word span { opacity: 1; transform: none; transition: opacity 320ms var(--fade-in), transform 520ms var(--move); }
+  .s3 .word span:nth-child(2) { transition-delay: 45ms; } .s3 .word span:nth-child(3) { transition-delay: 90ms; }
+  .s3 .word span:nth-child(4) { transition-delay: 135ms; } .s3 .word span:nth-child(5) { transition-delay: 180ms; }
+  .s3 .word span:nth-child(6) { transition-delay: 225ms; }
+</style></head>
+<body>
+<div class="stage" data-loop="off">
+  <img class="home" src="assets/home-handoff.png" alt="">
+  <div class="bloom"></div>
+  <div class="lockup layer">
+    <div class="mark layer">
+      <svg class="back" viewBox="0 0 24 24"><path d="M15 2.500h2.300a1.600 1.600 0 0 1 1.400.8l4.300 7.900a1.600 1.600 0 0 1 0 1.600l-4.300 7.900a1.600 1.600 0 0 1-1.400.8H15a.6.600 0 0 1-.5-.9l4.600-8.200a.8.800 0 0 0 0-.8l-4.600-8.200a.6.600 0 0 1 .5-.9z"/></svg>
+      <svg class="front" viewBox="0 0 24 24"><path d="M6.200 2.500h4.300a1.600 1.600 0 0 1 1.400.8l4.700 7.900a1.600 1.600 0 0 1 0 1.600l-4.700 7.900a1.600 1.600 0 0 1-1.400.8H6.200a1.200 1.200 0 0 1-1-1.800l4.800-8.100a.8.800 0 0 0 0-.8L5.200 4.300a1.200 1.200 0 0 1 1-1.800z"/></svg>
+    </div>
+    <div class="word layer"><span>d</span><span>i</span><span>r</span><span>e</span><span>c</span><span>t</span></div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>
+  (function () {
+    var st = document.querySelector('.stage');
+    var q = new URLSearchParams(location.search);
+    if (q.has('still') || q.has('state')) { st.classList.add('s1', 's2', 's3'); return; }
+    if (q.get('at') === 'landed') { document.documentElement.classList.add('still'); st.classList.add('s1', 's2', 's3', 's4'); return; }
+    var steps = [[400, 's1'], [800, 's2'], [1000, 's3'], [2600, 's4']];
+    function run() {
+      st.className = 'stage';
+      steps.forEach(function (s) { setTimeout(function () { st.classList.add(s[1]); }, s[0]); });
+      setTimeout(run, 6000);
+    }
+    run();
+  })();
+</script>
+</body></html>

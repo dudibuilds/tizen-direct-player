@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <!-- The TV build must stay on 12.0.x (see below); Mac-only projects may override, e.g. the test SDK needs 13. -->
+    <Ru7100NewtonsoftVersion Condition="'$(Ru7100NewtonsoftVersion)' == ''">12.0.3</Ru7100NewtonsoftVersion>
+  </PropertyGroup>
+  <!-- Imported by every project that compiles the shared core. -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)**/*.cs" Exclude="$(MSBuildThisFileDirectory)obj/**;$(MSBuildThisFileDirectory)bin/**" LinkBase="core" />
+    <!-- Tizen 5.0 (RU7100) ships Newtonsoft.Json 12.0.0.0 in its platform framework and always loads that copy,
+         so building against 13.x crashes at startup with FileLoadException. Keep this on 12.0.x. -->
+    <PackageReference Include="Newtonsoft.Json" Version="$(Ru7100NewtonsoftVersion)" />
+  </ItemGroup>
+</Project>

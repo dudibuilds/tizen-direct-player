@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>08 Still watching</title>
+<link rel="stylesheet" href="mock.css">
+<style>
+  /* After 3 autoplayed episodes with no key press, playback pauses on the first frame of the next episode and the
+     question opens as a right-edge sheet on the one dim layer (the player's panel pattern). Focus starts on the
+     primary Continue watching. State B: the paused frame alone, a beat before the sheet slides in. */
+  .dim { left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,.4); opacity: 0; transition: opacity 160ms var(--fade-out); }
+  .a .dim { opacity: 1; transition: opacity 240ms var(--fade-in); }
+  .sheet { left: 920px; top: 0; width: 1000px; height: 1080px; opacity: 0; transform: translateX(48px);
+    transition: transform 160ms var(--fade-out), opacity 160ms var(--fade-out); }
+  .a .sheet { opacity: 1; transform: none; transition: transform var(--t-sheet) var(--move), opacity var(--t-sheet) var(--fade-in); }
+  .sheet .bg { left: 0; top: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(11,14,20,0) 0, rgba(11,14,20,.55) 90px, rgba(11,14,20,.95) 200px, rgba(11,14,20,.97) 100%); }
+  .sheet .body { left: 272px; top: 0; width: 632px; height: 1080px; }
+  .logo { left: 0; top: 300px; width: 420px; height: 150px; }
+  .q { left: 0; top: 486px; width: 632px; }
+  .sub { left: 0; top: 548px; width: 632px; }
+  .acts { left: 0; top: 650px; display: flex; flex-direction: column; gap: 22px; align-items: flex-start; }
+  .acts .btn { width: 480px; min-width: 0; justify-content: flex-start; padding: 0 40px; }
+  .acts .btn:not(.primary) { height: 88px; }
+</style></head>
+<body>
+<div class="stage a" data-hold-a="5200" data-hold-b="2000">
+  <img class="cover" src="assets/bb-s2e5.jpg" alt="">
+  <div class="v-top"></div>
+  <div class="dim"></div>
+  <div class="t-title shadowed" style="left:96px;top:54px">Breaking Bad</div>
+  <div class="t-body shadowed" style="left:96px;top:124px">S2:E5<span class="sep"></span>Breakage</div>
+
+  <div class="sheet layer">
+    <div class="bg"></div>
+    <div class="body layer">
+      <div class="logo" data-area="38000"><img src="assets/bb-logo.png" alt=""></div>
+      <div class="q t-head">Still watching?</div>
+      <div class="sub t-meta">Paused after 3 episodes in a row</div>
+      <div class="acts">
+        <div class="btn primary focus"><svg class="i"><use href="#i-play"/></svg>Continue watching</div>
+        <div class="btn"><svg class="i"><use href="#i-left"/></svg>Back to browse</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+</body></html>

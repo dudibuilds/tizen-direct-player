@@ -1,0 +1,227 @@
+{
+ "metas": [
+  {
+   "id": "tt9300001",
+   "imdb_id": "tt9300001",
+   "type": "movie",
+   "name": "Signal Lost",
+   "releaseInfo": "2026",
+   "released": "2026-10-20T00:00:00.000Z",
+   "imdbRating": "7.4",
+   "genres": [
+    "Sci-Fi",
+    "Thriller"
+   ],
+   "genre": [
+    "Sci-Fi",
+    "Thriller"
+   ],
+   "country": "United States",
+   "director": [
+    "Mara Quinn"
+   ],
+   "writer": [],
+   "cast": [
+    "Ana Holt",
+    "Kai Dorn"
+   ],
+   "poster": "https://images.metahub.space/poster/small/tt9300001/img"
+  },
+  {
+   "id": "tt9300003",
+   "imdb_id": "tt9300003",
+   "type": "movie",
+   "name": "Sunny Days 2",
+   "releaseInfo": "2026",
+   "released": "2026-06-01T00:00:00.000Z",
+   "imdbRating": "6.6",
+   "genres": [
+    "Comedy",
+    "Romance"
+   ],
+   "genre": [
+    "Comedy",
+    "Romance"
+   ],
+   "country": "United States",
+   "director": [
+    "Kim Bright"
+   ],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300003/img"
+  },
+  {
+   "id": "tt9300004",
+   "imdb_id": "tt9300004",
+   "type": "movie",
+   "name": "Deep Orbit",
+   "releaseInfo": "2026",
+   "released": "2026-11-01T00:00:00.000Z",
+   "imdbRating": "6.9",
+   "genres": [
+    "Sci-Fi",
+    "Adventure"
+   ],
+   "genre": [
+    "Sci-Fi",
+    "Adventure"
+   ],
+   "country": "United States",
+   "director": [
+    "Ula Venn"
+   ],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300004/img"
+  },
+  {
+   "id": "tt9300005",
+   "imdb_id": "tt9300005",
+   "type": "movie",
+   "name": "Quiet Fields",
+   "releaseInfo": "2026",
+   "released": "2026-08-15T00:00:00.000Z",
+   "imdbRating": "7.0",
+   "genres": [
+    "Drama"
+   ],
+   "genre": [
+    "Drama"
+   ],
+   "country": "France",
+   "director": [
+    "Anne Roux"
+   ],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300005/img"
+  },
+  {
+   "id": "tt9300006",
+   "imdb_id": "tt9300006",
+   "type": "movie",
+   "name": "Low Tide Rising",
+   "releaseInfo": "2026",
+   "released": "2026-07-01T00:00:00.000Z",
+   "imdbRating": "4.9",
+   "genres": [
+    "Action"
+   ],
+   "genre": [
+    "Action"
+   ],
+   "country": "United States",
+   "director": [],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300006/img"
+  },
+  {
+   "id": "tt9300010",
+   "imdb_id": "tt9300010",
+   "type": "movie",
+   "name": "Comedy Hour",
+   "releaseInfo": "2026",
+   "released": "2026-05-01T00:00:00.000Z",
+   "imdbRating": "6.5",
+   "genres": [
+    "Comedy"
+   ],
+   "genre": [
+    "Comedy"
+   ],
+   "country": "United States",
+   "director": [],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300010/img"
+  },
+  {
+   "id": "tt9300012",
+   "imdb_id": "tt9300012",
+   "type": "movie",
+   "name": "The Quiet Ledger",
+   "releaseInfo": "2026",
+   "released": "2026-02-01T00:00:00.000Z",
+   "imdbRating": "6.9",
+   "genres": [
+    "Crime",
+    "Drama"
+   ],
+   "genre": [
+    "Crime",
+    "Drama"
+   ],
+   "country": "United States",
+   "director": [],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300012/img"
+  },
+  {
+   "id": "tt9300016",
+   "imdb_id": "tt9300016",
+   "type": "movie",
+   "name": "Iron Tide 2",
+   "releaseInfo": "2026",
+   "released": "2026-10-01T00:00:00.000Z",
+   "imdbRating": "6.8",
+   "genres": [
+    "Action"
+   ],
+   "genre": [
+    "Action"
+   ],
+   "country": "United States",
+   "director": [
+    "Rex Stone"
+   ],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300016/img"
+  },
+  {
+   "id": "tt9300017",
+   "imdb_id": "tt9300017",
+   "type": "movie",
+   "name": "Unrated Newcomer",
+   "releaseInfo": "2026",
+   "released": "2026-11-12T00:00:00.000Z",
+   "imdbRating": "",
+   "genres": [
+    "Drama"
+   ],
+   "genre": [
+    "Drama"
+   ],
+   "country": "United States",
+   "director": [],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300017/img"
+  },
+  {
+   "id": "tt9300024",
+   "imdb_id": "tt9300024",
+   "type": "movie",
+   "name": "Static Hearts",
+   "releaseInfo": "2026",
+   "released": "2026-03-03T00:00:00.000Z",
+   "imdbRating": "6.7",
+   "genres": [
+    "Romance",
+    "Sci-Fi"
+   ],
+   "genre": [
+    "Romance",
+    "Sci-Fi"
+   ],
+   "country": "United States",
+   "director": [],
+   "writer": [],
+   "cast": [],
+   "poster": "https://images.metahub.space/poster/small/tt9300024/img"
+  }
+ ]
+}
